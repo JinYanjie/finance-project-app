@@ -1,3 +1,10 @@
-<resources>
-    <string name="app_name">ChouMou</string>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation" >
+
+    <string name="nav_home">记账</string>
+    <string name="nav_form">报表</string>
+    <string name="nav_manage">管理</string>
+    <string name="nav_me">我的</string>
+
 </resources>

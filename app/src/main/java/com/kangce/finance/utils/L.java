@@ -2,7 +2,7 @@ package com.kangce.finance.utils;
 
 import android.app.Application;
 
-import com.example.jyj.choumou.BuildConfig;
+import com.kangce.finance.choumou.BuildConfig;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;

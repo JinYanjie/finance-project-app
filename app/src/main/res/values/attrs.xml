@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundProgress">
+        <attr name="borderWidth" format="dimension"></attr>
+        <attr name="unprogresColor" format="color"></attr>
+        <attr name="progressColor" format="color"></attr>
+        <attr name="tickWidth" format="dimension"></attr>
+        <attr name="tickDensity" format="integer"></attr>
+        <attr name="bgShow" format="boolean"></attr>
+        <attr name="radius" format="dimension"></attr>
+        <attr name="arcbgColor" format="color"></attr>
+        <attr name="degree" format="integer"></attr>
+        <attr name="arcCapRound" format="boolean"></attr>
+        <attr name="progressStyle" format="enum">
+            <enum name="tick" value="1"></enum>
+            <enum name="arc" value="0"></enum>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MyItem">
+        <attr name="item_left_name" format="string"/>
+        <attr name="item_right_name" format="string"/>
+        <attr name="item_middle_name" format="string"/>
+        <attr name="item_view_line" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="unvisible" value="1"/>
+            <enum name="gone" value="2"/>
+        </attr>
+        <attr name="item_tv_middle" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="unvisible" value="1"/>
+            <enum name="gone" value="2"/>
+        </attr>
+        <attr name="item_tv_right" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="unvisible" value="1"/>
+            <enum name="gone" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>
