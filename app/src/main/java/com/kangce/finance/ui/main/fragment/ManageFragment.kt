@@ -1,15 +1,13 @@
 package com.kangce.finance.ui.main.fragment
 
 import android.content.Context
-import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.kangce.finance.base.BaseFragment
 import com.kangce.finance.bean.ManagerItemBean
 import com.kangce.finance.choumou.R
-import com.kangce.finance.ui.main.manager.department.DepartmentActivity
-import kotlinx.android.synthetic.main.fragment_manage_layout.*
+import com.kangce.finance.ui.manager.department.DepartmentActivity
 
 class ManageFragment : BaseFragment() {
     var rv: RecyclerView? = null

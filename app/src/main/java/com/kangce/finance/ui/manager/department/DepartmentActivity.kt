@@ -1,4 +1,4 @@
-package com.kangce.finance.ui.main.manager.department
+package com.kangce.finance.ui.manager.department
 
 import android.content.Context
 import android.content.Intent
@@ -15,7 +15,6 @@ import com.kangce.finance.choumou.http.observer.HttpRxObservable
 import com.kangce.finance.choumou.http.observer.HttpRxObserver
 import com.kangce.finance.choumou.http.ohkttp.RetrofitManager
 import com.kangce.finance.choumou.http.service.ApiService
-import com.kangce.finance.utils.L
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_department.*
 import kotlinx.android.synthetic.main.title.*

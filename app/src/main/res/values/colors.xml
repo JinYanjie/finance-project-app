@@ -22,8 +22,6 @@
     <color name="search_translucent">#66000000</color>
     <color name="half_transparent">#66000000</color>
     <color name="filter_bg">#F6F6F6</color>
-    <color name="transparent">#00000000</color>
-    <color name="table_head_color">#F3F3F3</color>
     <color name="text_blue">#1F82F4</color>
     <color name="text_grey">#c5c5c5</color>
     <color name="edittext">#f2f2f2</color>
@@ -39,7 +37,6 @@
     <color name="text999">#999999</color>
     <color name="service_blue_color">#54C8D7</color>
     <color name="service_gray_color">#EFEFEF</color>
-    <color name="red">#D0021B</color>
     <color name="bg_gray">#EFEFEF</color>
     <color name="text_black_66">#666666</color>
     <color name="text_black_99">#999999</color>
@@ -49,4 +46,24 @@
 
     <color name="key_ok_color">#1280FA</color>
     <color name="key_ok_color_pressed">#0174f2</color>
+
+    <!-- 颜色 -->
+    <color name="table_head">#E5EFFE</color>
+    <color name="black">#FF000000</color>
+    <color name="light_gray">#e6e6e6</color>
+    <color name="deep_gray">#555555</color>
+    <color name="border_color">#817F80</color>
+    <color name="blue">#0000ff</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#FF0000</color>
+    <color name="beijin">#2c8fd3</color>
+    <color name="orange">#ffa500</color>
+    <color name="dashline_color">#C2C0C2</color>
+
+    <color name="table_head_color">#F3F3F3</color>
+    <color name="divider">#e5e5e5</color>
+    <color name="color_cc">#CCCCCC</color>
+
+
+
 </resources>
