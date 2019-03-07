@@ -11,6 +11,24 @@ interface ApiService {
      * 获取all部门信息
      */
     @POST("/department/all")
-    abstract fun getAllDepartment():Observable<DataBean<List<DepartmentBean>>>
+    abstract fun getAllDepartment(): Observable<DataBean<List<DepartmentBean>>>
+
+    /**
+     * 添加部门信息
+     */
+    @POST("/department/add")
+    abstract fun addDepartment(@Query("name") name: String): Observable<DataBean<Any>>
+
+    /**
+     * 添加部门信息
+     */
+    @POST("/department/delete")
+    abstract fun delDepartment(@Query("id") id: Int): Observable<DataBean<Any>>
+
+    /**
+     * 修改部门信息
+     */
+    @POST("/department/update")
+    abstract fun updateDepartment(@Query("id") id: Int,@Query("name") name:String): Observable<DataBean<Any>>
 
 }

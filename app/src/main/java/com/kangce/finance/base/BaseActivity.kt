@@ -1,10 +1,10 @@
 package com.kangce.finance.base
 
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.os.Bundle
+import com.hjq.toast.ToastUtils
 import com.qmuiteam.qmui.widget.dialog.QMUITipDialog
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
-import es.dmoral.toasty.Toasty
+
 import org.greenrobot.eventbus.EventBus
 
 open abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
@@ -48,7 +48,7 @@ open abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
     }
 
     override fun showToast(msg: String) {
-        Toasty.normal(this, msg).show()
+        ToastUtils.show(msg)
     }
 
     fun getLoading(): QMUITipDialog? {

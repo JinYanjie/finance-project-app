@@ -51,9 +51,10 @@ dependencies {
     // 通用ui组件库 https://github.com/Tencent/QMUI_Android
     implementation 'com.qmuiteam:qmui:1.0.8'
 
-    implementation 'com.github.GrenderG:Toasty:1.4.0'
     implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
 
     // RecyclerView BaseAdapter
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+    implementation 'com.hjq:toast:5.6'
 }

@@ -5,13 +5,9 @@
 
     <TextView
         android:id="@+id/tvName"
-        android:text="人事部"
-        android:textSize="14sp"
-        android:textColor="#333"
-        android:gravity="center"
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+        style="@style/tv_name"
+        android:text="人事部" />
+
     <ImageView
         android:layout_width="48dp"
         android:layout_height="match_parent"
@@ -19,10 +15,5 @@
         android:padding="16dp"
         android:src="@drawable/ic_right_arrow" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="12dp"
-        android:background="#c8c8c8" />
+    <include layout="@layout/line_left_12" />
 </RelativeLayout>

@@ -29,10 +29,16 @@
 
         <activity
             android:name="com.kangce.finance.ui.main.ShapeActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.kangce.finance.ui.main.manager.department.DepartmentActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kangce.finance.ui.main.manager.department.AddDepartmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kangce.finance.ui.main.manager.department.DeleteDepartmentActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
