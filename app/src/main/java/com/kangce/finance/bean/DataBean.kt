@@ -5,3 +5,6 @@ data class DataBean<T>(
     val msg: String="",
     val time: String=""
 )
+
+
+data class LoginSuccess(var token:String,var user:UserEntity): BaseEntity()
