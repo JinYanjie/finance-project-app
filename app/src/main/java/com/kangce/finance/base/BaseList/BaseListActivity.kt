@@ -3,9 +3,7 @@ package com.kangce.finance.base.BaseList
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.view.View
 import com.chad.library.adapter.base.BaseQuickAdapter
-import com.chad.library.adapter.base.BaseViewHolder
 import com.kangce.finance.base.BaseActivity
 import com.kangce.finance.widget.MEmptyView
 import com.kangce.finance.widget.MLoadMoreView
@@ -17,9 +15,6 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
     protected var mPageNum = 1
     private var isRefresh = true
 
-
-    protected abstract fun bindAdapter(): BaseQuickAdapter<T, BaseViewHolder>?
-    abstract var mAdapter: BaseQuickAdapter<T, BaseViewHolder>?
 
     override fun initView() {
         super.initView()
@@ -46,15 +41,15 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
 
     // 加载成功设置adapter
     private fun setAdapter() {
-        mAdapter = bindAdapter()
-        if (mAdapter != null) {
-            getRecyclerView()!!.adapter = mAdapter
-            mAdapter!!.onItemClickListener = this
+
+        if (getAdapter() != null) {
+            getRecyclerView()!!.adapter = getAdapter()
+            getAdapter()!!.onItemClickListener = this
             // 加载更多
             if (isOpenLoadMore()) {
-                mAdapter!!.setOnLoadMoreListener(this, getRecyclerView())
+                getAdapter()!!.setOnLoadMoreListener(this, getRecyclerView())
                 // 设置加载状态布局
-                mAdapter!!.setLoadMoreView(MLoadMoreView())
+                getAdapter()!!.setLoadMoreView(MLoadMoreView())
             }
 
             if (isOpenEmptyView()) {
@@ -65,7 +60,7 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
     }
 
     open fun setMyEmptyView() {
-        mAdapter!!.emptyView = MEmptyView(this).view
+        getAdapter()!!.emptyView = MEmptyView(this).view
     }
 
     fun isOpenEmptyView(): Boolean {
@@ -84,7 +79,7 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
     }
 
     fun clearAdapterData() {
-        mAdapter?.setNewData(null)
+        getAdapter()?.setNewData(null)
     }
 
 
@@ -108,25 +103,25 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
         // 请求数据完成
         if (getSwipeRefreshLayout() == null) return
         getSwipeRefreshLayout()!!.isRefreshing = false
-        mAdapter!!.setEnableLoadMore(true)
+        getAdapter()!!.setEnableLoadMore(true)
         val size = data?.size ?: 0
 
         //page为1 就刷新列表
         if (mPageNum == 1) {
-            mAdapter!!.setNewData(data)
+            getAdapter()!!.setNewData(data)
             isRefresh = false
         } else {
             if (size > 0) {
-                mAdapter!!.addData(data!!)
+                getAdapter()!!.addData(data!!)
             }
         }
 
         if (size < PAGE_SIZE) {
             // 没有更多了
-            mAdapter!!.loadMoreEnd()
+            getAdapter()!!.loadMoreEnd()
         } else {
             // 本次加载更多完成
-            mAdapter!!.loadMoreComplete()
+            getAdapter()!!.loadMoreComplete()
         }
     }
 
@@ -135,9 +130,9 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
         if (getSwipeRefreshLayout() != null) {
             getSwipeRefreshLayout()!!.isRefreshing = false
         }
-        if (mAdapter != null) {
-            mAdapter!!.setEnableLoadMore(true)
-            mAdapter!!.loadMoreFail()
+        if (getAdapter() != null) {
+            getAdapter()!!.setEnableLoadMore(true)
+            getAdapter()!!.loadMoreFail()
         }
     }
 
@@ -145,7 +140,7 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
 
     override fun onRefresh() {
         if (isOpenLoadMore()) {
-            mAdapter!!.setEnableLoadMore(false)
+            getAdapter()!!.setEnableLoadMore(false)
         }
         isRefresh = true
         mPageNum = 1
@@ -154,13 +149,9 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
 
     override fun onLoadMoreRequested() {
         mPageNum++
-        mAdapter!!.setEnableLoadMore(true)
+        getAdapter()!!.setEnableLoadMore(true)
         isRefresh = false
         loadListData()
-    }
-
-    override fun onItemClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
-
     }
 
 }
