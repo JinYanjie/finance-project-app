@@ -136,8 +136,6 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
         }
     }
 
-    // ========================================================================================== //
-
     override fun onRefresh() {
         if (isOpenLoadMore()) {
             getAdapter()!!.setEnableLoadMore(false)
@@ -153,5 +151,4 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
         isRefresh = false
         loadListData()
     }
-
 }

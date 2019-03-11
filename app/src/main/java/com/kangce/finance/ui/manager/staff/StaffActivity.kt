@@ -1,4 +1,4 @@
-package com.kangce.finance.ui.main.manager.department.staff
+package com.kangce.finance.ui.manager.staff
 
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
@@ -13,9 +13,9 @@ import com.kangce.finance.choumou.http.observer.HttpRxObservable
 import com.kangce.finance.choumou.http.observer.HttpRxObserver
 import com.kangce.finance.choumou.http.ohkttp.RetrofitManager
 import com.kangce.finance.choumou.http.service.ApiService
-import com.kangce.finance.ui.main.manager.department.AddDepartmentActivity
-import com.kangce.finance.ui.main.manager.department.DeleteDepartmentActivity
-import com.kangce.finance.ui.main.manager.department.DepartmentActivity
+import com.kangce.finance.ui.manager.department.AddDepartmentActivity
+import com.kangce.finance.ui.manager.department.DeleteDepartmentActivity
+import com.kangce.finance.ui.manager.department.DepartmentActivity
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_department.*
 import kotlinx.android.synthetic.main.title.*
