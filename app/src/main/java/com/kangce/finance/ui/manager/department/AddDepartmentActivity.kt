@@ -1,8 +1,7 @@
-package com.kangce.finance.ui.main.manager.department
+package com.kangce.finance.ui.manager.department
 
 import android.content.Context
 import android.content.Intent
-import android.text.Editable
 import android.text.TextUtils
 import android.view.View
 import com.hjq.toast.ToastUtils

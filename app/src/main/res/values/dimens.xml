@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="button_radius">5dp</dimen>
+
+    <dimen name="comm_margin_19">19dp</dimen>
+    <dimen name="comm_margin_15">15dp</dimen>
+    <dimen name="comm_margin">16dp</dimen>
+    <dimen name="comm_border_margin">38dp</dimen>
+    <dimen name="comm_bottom_height_small">39dp</dimen>
+    <dimen name="comm_edit_height">47dp</dimen>
+    <dimen name="topbar_height">48dp</dimen>
+    <dimen name="top_bar_height">48dp</dimen>
+    <dimen name="comm_bottom_height">44dp</dimen>
+    <dimen name="banner_height">145dp</dimen>
+
+    <dimen name="divider_height">0.5dp</dimen>
+
+    <dimen name="image_height">40dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="myscore_unify_padding">13dp</dimen>
+
+    <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="markethome_item_left">68dp</dimen>
+
+
+    <!-- message -->
+    <dimen name="message_bottom_function_viewpager_height">220dp</dimen>
+    <dimen name="input_panel_image_margin_bottom">3dip</dimen>
+    <dimen name="input_panel_image_margin_top">20dip</dimen>
+
+    <!-- map -->
+    <dimen name="friend_map_btn_height">42dp</dimen>
+    <dimen name="friend_map_bound_padding">80dp</dimen>
+
+</resources>

@@ -31,13 +31,13 @@
             android:name="com.kangce.finance.ui.main.ShapeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kangce.finance.ui.main.manager.department.DepartmentActivity"
+            android:name="com.kangce.finance.ui.manager.department.DepartmentActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kangce.finance.ui.main.manager.department.AddDepartmentActivity"
+            android:name="com.kangce.finance.ui.manager.department.AddDepartmentActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.kangce.finance.ui.main.manager.department.DeleteDepartmentActivity"
+            android:name="com.kangce.finance.ui.manager.department.DeleteDepartmentActivity"
             android:screenOrientation="portrait" />
     </application>
 

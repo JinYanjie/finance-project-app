@@ -1,6 +1,5 @@
-package com.kangce.finance.ui.main.manager.department
+package com.kangce.finance.ui.manager.department
 
-import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.text.TextUtils
@@ -18,7 +17,6 @@ import com.kangce.finance.widget.DialogMessageHint
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_edit_department.*
 import kotlinx.android.synthetic.main.title.*
-import kotlinx.android.synthetic.main.title.view.*
 
 class DeleteDepartmentActivity : BaseActivity() {
     override fun getLayoutId(): Int {

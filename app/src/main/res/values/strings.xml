@@ -7,4 +7,28 @@
     <string name="nav_manage">管理</string>
     <string name="nav_me">我的</string>
 
+
+
+
+    <string name="hint_please_input_phone">请输入手机号码</string>
+    <string name="hint_please_input_pwd">请输入密码</string>
+    <string name="hint_please_input_nick_name">请输入昵称</string>
+    <string name="hint_please_input_code">请输入短信验证码</string>
+    <string name="hint_search">搜个关键词试试看</string>
+    <string name="hint_empty_tips">哎呀，暂时没有数据哦...</string>
+    <string name="hint_empty_refresh">点击刷新</string>
+    <string name="hint_no_data">不能再拖了，我也是有底线的</string>
+
+
+
+    <string name="login">登    录</string>
+    <string name="register">注册</string>
+    <string name="skip">跳过</string>
+    <string name="save">保存</string>
+    <string name="title_forget">忘记密码</string>
+    <string name="forget">忘记密码？</string>
+    <string name="get_code">获取验证码</string>
+
+
+
 </resources>
