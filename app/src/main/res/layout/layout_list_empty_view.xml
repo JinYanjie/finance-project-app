@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+
+    <ImageView
+        android:id="@+id/img_show"
+        android:layout_width="200dp"
+        android:layout_height="163dp"
+        android:src="@drawable/ic_empty_tongyong"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_14"
+        android:textColor="@color/text_gray"
+        android:text="哎呀，暂时没有数据哦..."
+        />
+
+    <TextView
+        android:id="@+id/txt_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_12"
+        android:textColor="@color/text_hint"
+        android:layout_marginTop="@dimen/lay_8"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="刷新"
+        />
+
+</LinearLayout>

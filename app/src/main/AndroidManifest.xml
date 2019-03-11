@@ -39,6 +39,9 @@
         <activity
             android:name="com.kangce.finance.ui.manager.department.DeleteDepartmentActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kangce.finance.ui.manager.staff.StaffActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
