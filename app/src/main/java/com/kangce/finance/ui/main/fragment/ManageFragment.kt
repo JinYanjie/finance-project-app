@@ -8,6 +8,7 @@ import com.kangce.finance.base.BaseFragment
 import com.kangce.finance.bean.ManagerItemBean
 import com.kangce.finance.choumou.R
 import com.kangce.finance.ui.manager.department.DepartmentActivity
+import com.kangce.finance.ui.manager.staff.StaffActivity
 
 class ManageFragment : BaseFragment() {
     var rv: RecyclerView? = null
@@ -21,7 +22,7 @@ class ManageFragment : BaseFragment() {
         rv = view.findViewById(R.id.rv)
         rv?.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         adapter = ManagerItemAdapter()
-        rv?.adapter=adapter
+        rv?.adapter = adapter
         adapter?.setNewData(getData())
         adapter?.setOnItemClickListener { adapter, view, position ->
             var item = adapter.data[position] as ManagerItemBean
@@ -32,6 +33,7 @@ class ManageFragment : BaseFragment() {
                     DepartmentActivity.start(activity as Context)
                 }
                 "职员管理" -> {
+                    StaffActivity.start(activity as Context)
                 }
                 "税率管理" -> {
                 }

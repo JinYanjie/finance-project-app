@@ -19,7 +19,7 @@ class AuthInterceptor(context: Context):Interceptor {
                 val authorised = originalRequest.newBuilder().header("platform", "2")
 
                 var token=""
-                if (!TextUtils.isEmpty(token)){
+                if (TextUtils.isEmpty(token)){
                     authorised.header("Authorization", Constant.TOKEN)
                 }
 

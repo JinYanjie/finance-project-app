@@ -11,8 +11,6 @@ interface RecyclerViewLoadListListener<DATA> {
 
     fun getSwipeRefreshLayout(): SwipeRefreshLayout?
 
-    fun getAdapter(): BaseQuickAdapter<DATA, BaseViewHolder>?
-
     fun getLayoutManager(): RecyclerView.LayoutManager?
 
     fun isOpenAuthRefresh(): Boolean

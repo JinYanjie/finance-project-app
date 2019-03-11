@@ -1,8 +1,7 @@
 package com.kangce.finance
 
 object Constant {
-    var BASE_URL = "http://192.168.1.70:8081"
+    var BASE_URL = "http://192.168.1.71:8081"
     var CER_API = "api.pem"// 证书
-//    var TOKEN="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjcwNTksInR5cGUiOjAsImV4cCI6IjAiLCJ0aW1lIjoxNTQ1NzIwMDYwfQ.TuvMcKxiI-ioQfeIRquixzGGytapoKz_K-PRvc8dDnk"
-    var TOKEN=""
+    var TOKEN="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOTk3NzY2NTUzMyIsImNyZWF0ZWQiOjE1NTIyOTU1Mjc5MzgsImV4cCI6MTU1MjM4MTkyN30.CAbxAd2N4TeJKVA1H2gpypuOsSXgLpStLuKlkSWNy1P5dfdWfVbajR6XVe3Y_sEZdSwU9Kyt0AjW3CEkZCM15Q"
 }
