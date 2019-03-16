@@ -5,6 +5,8 @@ import android.app.Application
 import com.hjq.toast.ToastUtils
 import com.kangce.finance.utils.L
 import com.kangce.finance.utils.MyHawkSpStorage
+import com.kangce.finance.utils.T
+import com.kangce.finance.utils.UserCacheHelper
 import com.orhanobut.hawk.Hawk
 import kotlin.properties.Delegates
 
@@ -26,6 +28,8 @@ class MyApp : Application() {
         ToastUtils.init(this)
         //Hawk初始化
         initHawk()
+        T.init(this)
+        UserCacheHelper.init(this)
     }
 
     fun initHawk(){

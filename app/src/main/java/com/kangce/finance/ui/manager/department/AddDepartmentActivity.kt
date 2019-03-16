@@ -45,7 +45,7 @@ class AddDepartmentActivity : BaseActivity() {
     }
 
     private fun addDepartment(name: String) {
-        var departments = RetrofitManager.retrofitManager.getRetrofit(this)
+        var departments = RetrofitManager.retrofitManager.getRetrofit()
                 .create(ApiService::class.java).addDepartment(name)
         HttpRxObservable.getObservable(departments, this).subscribe(object : HttpRxObserver<Any>() {
             override fun onStart(d: Disposable) {

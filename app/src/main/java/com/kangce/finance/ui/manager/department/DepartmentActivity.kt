@@ -69,7 +69,7 @@ class DepartmentActivity : BaseActivity() {
 
 
     private fun getDepartment() {
-        var departments = RetrofitManager.retrofitManager.getRetrofit(this)
+        var departments = RetrofitManager.retrofitManager.getRetrofit()
                 .create(ApiService::class.java).getAllDepartment()
         HttpRxObservable.getObservable(departments, this).subscribe(object : HttpRxObserver<List<DepartmentBean>>() {
             override fun onStart(d: Disposable) {

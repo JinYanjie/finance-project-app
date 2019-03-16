@@ -17,6 +17,7 @@ interface LoginContract {
 
         fun onRegisterSuccess(success:LoginSuccess)
 
+        fun onLoginSuccess(success:LoginSuccess)
     }
 
     interface Presenter{
@@ -79,7 +80,7 @@ class LoginPresenter(view: LoginContract.View, lifeCycler: LifecycleProvider<*>?
 
             override fun onSuccess(response: LoginSuccess) {
                 getView()?.closeLoading()
-                getView()?.onRegisterSuccess(response)
+                getView()?.onLoginSuccess(response)
             }
         }
 
