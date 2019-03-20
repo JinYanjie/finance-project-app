@@ -5,7 +5,9 @@ import android.view.View
 import com.kangce.finance.base.BaseFragment
 import com.kangce.finance.choumou.R
 import com.kangce.finance.ui.auth.LoginActivity
+import com.kangce.finance.utils.UserCacheHelper
 import kotlinx.android.synthetic.main.fragment_me_layout.*
+import java.util.*
 
 class MeFragment:BaseFragment() {
     override fun getLayoutId(): Int {
@@ -17,6 +19,37 @@ class MeFragment:BaseFragment() {
 
         tv_login.setOnClickListener{
             LoginActivity.start(context!!)
+        }
+
+        tv_logout.setOnClickListener{
+            UserCacheHelper.clear()
+            showView()
+        }
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        showView()
+
+    }
+
+    private fun showView() {
+        val entity = UserCacheHelper.getEntity()
+
+        if(entity==null){
+            tv_login.visibility = View.VISIBLE
+            ll_userContent.visibility = View.GONE
+        }else{
+            val user = entity.user
+            tv_login.visibility = View.GONE
+            ll_userContent.visibility = View.VISIBLE
+
+            tv_userName.text = "用户名: ${user.username}"
+            tv_userPhone.text = "手机: ${user.phone}"
+            tv_userMail.text = "邮箱: ${user.email}"
+            tv_userLevel.text = "权限等级: ${user.level}"
         }
     }
 

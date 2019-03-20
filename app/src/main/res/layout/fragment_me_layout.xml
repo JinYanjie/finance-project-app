@@ -13,6 +13,66 @@
         android:textColor="@color/white"
         android:background="@drawable/shape_100r_round_1cc3d3"
         android:padding="10dp"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    
+    <LinearLayout
+        android:id="@+id/ll_userContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+        
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名: 水电费经理"
+            android:textSize="18sp"
+            android:textColor="@color/text666"/>
+        
+        <TextView
+            android:id="@+id/tv_userPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电话: 18877889900"
+            android:textSize="18sp"
+            android:textColor="@color/text666"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_userMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邮箱: 18877889900"
+            android:textSize="18sp"
+            android:textColor="@color/text666"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_userLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="权限级别: 1"
+            android:textSize="18sp"
+            android:textColor="@color/text666"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_100r_round_1cc3d3"
+            android:text="退出登录"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+        
+    </LinearLayout>
 
 </RelativeLayout>
