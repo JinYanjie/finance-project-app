@@ -51,7 +51,7 @@ class StaffActivity : BaseListActivity<StaffBean>() {
         tvTitle.text = "职员管理"
         imgRight.visibility = View.VISIBLE
         imgRight.setImageResource(R.drawable.add)
-        imgRight.setOnClickListener { AddDepartmentActivity.start(this) }
+        imgRight.setOnClickListener { AddStaffActivity.start(this) }
 
     }
 
