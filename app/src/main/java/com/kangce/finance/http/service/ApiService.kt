@@ -1,9 +1,15 @@
 package com.kangce.finance.choumou.http.service
 
 import com.kangce.finance.bean.*
+import com.kangce.finance.bean.DataBean
+import com.kangce.finance.bean.DepartmentBean
+import com.kangce.finance.bean.LoginSuccess
+import com.kangce.finance.bean.Staff
 import io.reactivex.Observable
 import okhttp3.RequestBody
 import retrofit2.http.*
+import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface ApiService {
 
@@ -50,5 +56,23 @@ interface ApiService {
     @POST("/salary/get/staffSalary")
     abstract fun getEnterStaff(): Observable<DataBean<List<SBean>>>
 
+
+
+
+    /**
+     * 用户注册
+     */
+    @POST("/auth/register")
+    fun userRegister(@Query("phone") phone: String,
+                     @Query("password") password: String
+    ): Observable<DataBean<LoginSuccess>>
+
+    /**
+     * 用户登录
+     */
+    @POST("/auth/login")
+    fun userLogin(@Query("phone") phone: String,
+                  @Query("password") password: String
+    ): Observable<DataBean<LoginSuccess>>
 
 }

@@ -57,7 +57,7 @@ class StaffActivity : BaseListActivity<StaffBean>() {
 
 
     private fun getStaff() {
-        var staff = RetrofitManager.retrofitManager.getRetrofit(this)
+        var staff = RetrofitManager.retrofitManager.getRetrofit()
                 .create(ApiService::class.java).getAllStaff(mPageNum, PAGE_SIZE)
         HttpRxObservable.getObservable(staff, this).subscribe(object : HttpRxObserver<Staff>() {
             override fun onStart(d: Disposable) {

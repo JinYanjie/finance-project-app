@@ -58,7 +58,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="验证码登录"
+                    android:text="注册"
                     android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_marginLeft="10dp"/>
@@ -88,7 +88,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="密码登录"
+                android:text="登     录"
                 android:textSize="24sp"
                 android:textColor="@color/text666"
                 android:layout_marginTop="50dp"
@@ -105,9 +105,9 @@
 
 
                 <com.kangce.finance.widget.ClearEditText
+                    android:id="@+id/edit_phone"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:id="@+id/edit_phone"
                     style="@style/edit_bottom_line2"
                     android:hint="@string/hint_please_input_phone"
                     android:inputType="phone"
@@ -173,14 +173,6 @@
     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/tv_input"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:transitionName="input"/>
+
 
 </RelativeLayout>

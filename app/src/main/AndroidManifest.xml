@@ -47,6 +47,13 @@
             android:screenOrientation="portrait" />
         <activity android:name="com.kangce.finance.ui.manager.salary.SalaryActivity"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.kangce.finance.ui.auth.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kangce.finance.ui.auth.RegisterActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

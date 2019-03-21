@@ -2,6 +2,7 @@ package com.kangce.finance.choumou.http.ohkttp
 
 import android.content.Context
 import com.kangce.finance.Constant
+import com.kangce.finance.MyApp
 import com.kangce.finance.choumou.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.internal.platform.Platform
@@ -29,13 +30,13 @@ class RetrofitManager private constructor(){
     }
 
     // 设置okHttp
-    private fun okHttpClient(check: Boolean,context: Context): OkHttpClient {
+    private fun okHttpClient(check: Boolean): OkHttpClient {
 
         val builder = OkHttpClient.Builder()
                 .connectTimeout(TIMEOUT, TimeUnit.SECONDS)
                 .writeTimeout(TIMEOUT, TimeUnit.SECONDS)
                 .readTimeout(TIMEOUT, TimeUnit.SECONDS)
-        builder.addInterceptor(AuthInterceptor(context))
+        builder.addInterceptor(AuthInterceptor())
         // 如果是debug模式就开启日志
 
 
@@ -49,7 +50,7 @@ class RetrofitManager private constructor(){
         if (check) {
             try {
                 var factory: SSLSocketFactory? = null
-                factory = getSSLSocketFactory(context.assets.open(Constant.CER_API))
+                factory = getSSLSocketFactory(MyApp.instance().assets.open(Constant.CER_API))
                 if (factory != null) {
                     builder.sslSocketFactory(factory)
                 }
@@ -64,19 +65,20 @@ class RetrofitManager private constructor(){
         return builder.build()
     }
 
-    fun getRetrofit(context: Context): Retrofit {
+    fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
-                .client(okHttpClient(false,context))
+                .client(okHttpClient(false))
                 .baseUrl(Constant.BASE_URL)
                 .addConverterFactory(CustomGsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
     }
 
+
     //访问三方 可替换url
-    fun getRetrofit(context: Context,url: String): Retrofit {
+    fun getRetrofit(url: String): Retrofit {
         return Retrofit.Builder()
-                .client(okHttpClient(false,context))
+                .client(okHttpClient(false))
                 .baseUrl(url)
                 .addConverterFactory(CustomGsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

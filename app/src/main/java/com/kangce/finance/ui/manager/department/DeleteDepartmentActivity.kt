@@ -52,7 +52,7 @@ class DeleteDepartmentActivity : BaseActivity() {
     }
 
     private fun updateDepartment(department: DepartmentBean, name: String) {
-        var departments = RetrofitManager.retrofitManager.getRetrofit(this)
+        var departments = RetrofitManager.retrofitManager.getRetrofit()
                 .create(ApiService::class.java).updateDepartment(department.id, name)
         HttpRxObservable.getObservable(departments, this).subscribe(object : HttpRxObserver<Any>() {
             override fun onStart(d: Disposable) {
@@ -88,7 +88,7 @@ class DeleteDepartmentActivity : BaseActivity() {
     }
 
     private fun deleteDepartment(department: DepartmentBean) {
-        var departments = RetrofitManager.retrofitManager.getRetrofit(this)
+        var departments = RetrofitManager.retrofitManager.getRetrofit()
                 .create(ApiService::class.java).delDepartment(department.id)
         HttpRxObservable.getObservable(departments, this).subscribe(object : HttpRxObserver<Any>() {
             override fun onStart(d: Disposable) {
