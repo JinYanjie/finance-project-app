@@ -1,8 +1,8 @@
-package com.kangce.finance.choumou.http.observer
+package com.kangce.finance.http.observer
 
 import android.text.TextUtils
-import com.kangce.finance.choumou.http.exceptition.ApiException
-import com.kangce.finance.choumou.http.exceptition.ExceptionEngine
+import com.kangce.finance.http.exceptition.ApiException
+import com.kangce.finance.http.exceptition.ExceptionEngine
 import io.reactivex.Observer
 import io.reactivex.annotations.NonNull
 import io.reactivex.disposables.Disposable

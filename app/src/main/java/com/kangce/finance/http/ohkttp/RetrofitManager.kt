@@ -1,9 +1,8 @@
-package com.kangce.finance.choumou.http.ohkttp
+package com.kangce.finance.http.ohkttp
 
-import android.content.Context
 import com.kangce.finance.Constant
 import com.kangce.finance.MyApp
-import com.kangce.finance.choumou.BuildConfig
+import com.kangce.finance.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.internal.platform.Platform
 import okhttp3.internal.platform.Platform.WARN

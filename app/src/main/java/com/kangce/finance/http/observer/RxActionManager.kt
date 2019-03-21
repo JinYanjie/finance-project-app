@@ -1,4 +1,4 @@
-package com.kangce.finance.choumou.http.observer
+package com.kangce.finance.http.observer
 
 import io.reactivex.disposables.Disposable
 

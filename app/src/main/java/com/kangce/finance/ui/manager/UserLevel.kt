@@ -7,7 +7,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.kangce.finance.base.BaseActivity
 import com.kangce.finance.base.BaseList.BaseListActivity
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 
 //class UserLevel:BaseListActivity<Any>() {
 //

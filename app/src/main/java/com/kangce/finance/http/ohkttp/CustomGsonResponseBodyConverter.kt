@@ -1,7 +1,7 @@
-package com.kangce.finance.choumou.http.ohkttp
+package com.kangce.finance.http.ohkttp
 
-import com.kangce.finance.choumou.http.exceptition.ExceptionEngine
-import com.kangce.finance.choumou.http.exceptition.ServerException
+import com.kangce.finance.http.exceptition.ExceptionEngine
+import com.kangce.finance.http.exceptition.ServerException
 import com.google.gson.Gson
 import com.google.gson.TypeAdapter
 import okhttp3.ResponseBody

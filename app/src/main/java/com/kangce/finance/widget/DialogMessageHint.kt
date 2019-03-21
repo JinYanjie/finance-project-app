@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.text.Html
 import android.view.View
 import android.widget.TextView
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 
 class DialogMessageHint private constructor(builder: Builder) : Dialog(builder.context, R.style.MyDialogStyle) {
 

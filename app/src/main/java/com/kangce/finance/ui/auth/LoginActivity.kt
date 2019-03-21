@@ -6,7 +6,7 @@ import android.text.TextUtils
 import android.view.View
 import com.kangce.finance.base.BaseActivity
 import com.kangce.finance.bean.LoginSuccess
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 import com.kangce.finance.utils.T
 import com.kangce.finance.utils.UserCacheHelper
 import kotlinx.android.synthetic.main.activity_login.*

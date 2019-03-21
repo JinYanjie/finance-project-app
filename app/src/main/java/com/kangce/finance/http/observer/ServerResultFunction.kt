@@ -1,7 +1,7 @@
-package com.kangce.finance.choumou.http.observer
+package com.kangce.finance.http.observer
 
 import com.kangce.finance.bean.DataBean
-import com.kangce.finance.choumou.http.exceptition.ServerException
+import com.kangce.finance.http.exceptition.ServerException
 import io.reactivex.annotations.NonNull
 import io.reactivex.functions.Function
 

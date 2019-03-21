@@ -9,7 +9,7 @@ import android.view.WindowManager
 import android.widget.PopupWindow
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 import android.graphics.drawable.BitmapDrawable
 
 

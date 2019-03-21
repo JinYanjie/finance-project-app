@@ -13,12 +13,12 @@ import com.kangce.finance.base.BaseList.BaseListActivity
 import com.kangce.finance.bean.SBean
 import com.kangce.finance.bean.Staff
 import com.kangce.finance.bean.StaffBeanShorts
-import com.kangce.finance.choumou.R
-import com.kangce.finance.choumou.http.exceptition.ApiException
-import com.kangce.finance.choumou.http.observer.HttpRxObservable
-import com.kangce.finance.choumou.http.observer.HttpRxObserver
-import com.kangce.finance.choumou.http.ohkttp.RetrofitManager
-import com.kangce.finance.choumou.http.service.ApiService
+import com.kangce.finance.R
+import com.kangce.finance.http.exceptition.ApiException
+import com.kangce.finance.http.observer.HttpRxObservable
+import com.kangce.finance.http.observer.HttpRxObserver
+import com.kangce.finance.http.ohkttp.RetrofitManager
+import com.kangce.finance.http.service.ApiService
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_salary.*
 
@@ -56,7 +56,7 @@ class SalaryActivity : BaseListActivity<SBean>() {
     }
 
     private fun getEnterStaff() {
-        var staff = RetrofitManager.retrofitManager.getRetrofit(this)
+        var staff = RetrofitManager.retrofitManager.getRetrofit()
                 .create(ApiService::class.java).getEnterStaff()
         HttpRxObservable.getObservable(staff, this).subscribe(object : HttpRxObserver<List<SBean>>() {
             override fun onStart(d: Disposable) {

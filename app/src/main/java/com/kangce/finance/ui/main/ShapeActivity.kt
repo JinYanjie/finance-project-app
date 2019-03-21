@@ -1,7 +1,7 @@
 package com.kangce.finance.ui.main
 
 import com.kangce.finance.base.BaseActivity
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 
 
 class ShapeActivity : BaseActivity() {

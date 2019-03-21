@@ -1,4 +1,4 @@
-package com.kangce.finance.choumou.http.service
+package com.kangce.finance.http.service
 
 import com.kangce.finance.bean.*
 import com.kangce.finance.bean.DataBean

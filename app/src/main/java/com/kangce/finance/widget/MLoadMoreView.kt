@@ -1,7 +1,7 @@
 package com.kangce.finance.widget
 
 import com.chad.library.adapter.base.loadmore.LoadMoreView
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 
 class MLoadMoreView : LoadMoreView() {
 

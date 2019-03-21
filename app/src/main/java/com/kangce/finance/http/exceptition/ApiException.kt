@@ -1,4 +1,4 @@
-package com.kangce.finance.choumou.http.exceptition
+package com.kangce.finance.http.exceptition
 
 class ApiException(throwable:Throwable,code: Int):RuntimeException(throwable) {
     var code: Int = 0//错误码

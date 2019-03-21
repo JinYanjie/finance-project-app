@@ -14,12 +14,12 @@ import com.hjq.toast.ToastUtils
 import com.kangce.finance.base.BaseActivity
 import com.kangce.finance.bean.DepartmentBean
 import com.kangce.finance.bean.StaffBean
-import com.kangce.finance.choumou.R
-import com.kangce.finance.choumou.http.exceptition.ApiException
-import com.kangce.finance.choumou.http.observer.HttpRxObservable
-import com.kangce.finance.choumou.http.observer.HttpRxObserver
-import com.kangce.finance.choumou.http.ohkttp.RetrofitManager
-import com.kangce.finance.choumou.http.service.ApiService
+import com.kangce.finance.R
+import com.kangce.finance.http.exceptition.ApiException
+import com.kangce.finance.http.observer.HttpRxObservable
+import com.kangce.finance.http.observer.HttpRxObserver
+import com.kangce.finance.http.ohkttp.RetrofitManager
+import com.kangce.finance.http.service.ApiService
 import com.kangce.finance.utils.L
 import com.kangce.finance.widget.EditTextClear
 import com.kangce.finance.widget.PopupWindowList
@@ -113,7 +113,7 @@ class AddStaffActivity : BaseActivity() {
     private fun addStaff(staffBean: StaffBean) {
         var toJson = Gson().toJson(staffBean)
         var create = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"), toJson)
-        var departments = RetrofitManager.retrofitManager.getRetrofit(this)
+        var departments = RetrofitManager.retrofitManager.getRetrofit()
                 .create(ApiService::class.java).addStaff(create)
         HttpRxObservable.getObservable(departments, this).subscribe(object : HttpRxObserver<StaffBean>() {
             override fun onStart(d: Disposable) {
@@ -132,7 +132,7 @@ class AddStaffActivity : BaseActivity() {
     }
 
     private fun getDepartment() {
-        var departments = RetrofitManager.retrofitManager.getRetrofit(this)
+        var departments = RetrofitManager.retrofitManager.getRetrofit()
                 .create(ApiService::class.java).getAllDepartment()
         HttpRxObservable.getObservable(departments, this).subscribe(object : HttpRxObserver<List<DepartmentBean>>() {
             override fun onStart(d: Disposable) {
