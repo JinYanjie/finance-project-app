@@ -12,7 +12,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 
 class NavigationButton : FrameLayout {
     var fragment: Fragment? = null

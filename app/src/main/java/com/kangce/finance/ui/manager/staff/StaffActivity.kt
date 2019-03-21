@@ -14,14 +14,14 @@ import com.kangce.finance.base.BaseList.BaseListActivity
 import com.kangce.finance.bean.DepartmentBean
 import com.kangce.finance.bean.Staff
 import com.kangce.finance.bean.StaffBean
-import com.kangce.finance.choumou.R
-import com.kangce.finance.choumou.R.drawable.finish
-import com.kangce.finance.choumou.R.id.*
-import com.kangce.finance.choumou.http.exceptition.ApiException
-import com.kangce.finance.choumou.http.observer.HttpRxObservable
-import com.kangce.finance.choumou.http.observer.HttpRxObserver
-import com.kangce.finance.choumou.http.ohkttp.RetrofitManager
-import com.kangce.finance.choumou.http.service.ApiService
+import com.kangce.finance.R
+import com.kangce.finance.R.drawable.finish
+import com.kangce.finance.R.id.*
+import com.kangce.finance.http.exceptition.ApiException
+import com.kangce.finance.http.observer.HttpRxObservable
+import com.kangce.finance.http.observer.HttpRxObserver
+import com.kangce.finance.http.ohkttp.RetrofitManager
+import com.kangce.finance.http.service.ApiService
 import com.kangce.finance.ui.manager.department.AddDepartmentActivity
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.title.*
@@ -51,7 +51,7 @@ class StaffActivity : BaseListActivity<StaffBean>() {
         tvTitle.text = "职员管理"
         imgRight.visibility = View.VISIBLE
         imgRight.setImageResource(R.drawable.add)
-        imgRight.setOnClickListener { AddDepartmentActivity.start(this) }
+        imgRight.setOnClickListener { AddStaffActivity.start(this) }
 
     }
 

@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.view.View
 import com.kangce.finance.base.BaseFragment
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 import com.kangce.finance.ui.main.fragment.FormFragment
 import com.kangce.finance.ui.main.fragment.HomeFragment
 import com.kangce.finance.ui.main.fragment.ManageFragment

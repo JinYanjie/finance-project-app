@@ -2,23 +2,9 @@ package com.kangce.finance
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import com.kangce.finance.base.BaseActivity
-
-
-import com.kangce.finance.bean.DepartmentBean
-import com.kangce.finance.choumou.R
-import com.kangce.finance.choumou.http.exceptition.ApiException
-import com.kangce.finance.choumou.http.observer.HttpRxObservable
-import com.kangce.finance.choumou.http.observer.HttpRxObserver
-import com.kangce.finance.choumou.http.ohkttp.RetrofitManager
-import com.kangce.finance.choumou.http.service.ApiService
 import com.kangce.finance.ui.nav.NavFragment
 import com.kangce.finance.ui.nav.NavigationButton
-import com.kangce.finance.utils.L
-import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
-import io.reactivex.disposables.Disposable
-
 class MainActivity : BaseActivity(), NavFragment.OnNavigationReselectListener {
 
 

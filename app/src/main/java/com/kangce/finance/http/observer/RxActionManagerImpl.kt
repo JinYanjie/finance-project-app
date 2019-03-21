@@ -1,4 +1,4 @@
-package com.kangce.finance.choumou.http.observer
+package com.kangce.finance.http.observer
 
 import android.support.v4.util.ArrayMap
 import io.reactivex.disposables.Disposable

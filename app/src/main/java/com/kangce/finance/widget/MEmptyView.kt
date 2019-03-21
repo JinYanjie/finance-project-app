@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.kangce.finance.base.BaseList.BaseListActivity
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 
 
 class MEmptyView<T> {

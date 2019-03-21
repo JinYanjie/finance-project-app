@@ -3,11 +3,11 @@ package com.kangce.finance.ui.auth
 import com.kangce.finance.base.IBasePresenter
 import com.kangce.finance.base.IBaseView
 import com.kangce.finance.bean.LoginSuccess
-import com.kangce.finance.choumou.http.exceptition.ApiException
-import com.kangce.finance.choumou.http.observer.HttpRxObservable
-import com.kangce.finance.choumou.http.observer.HttpRxObserver
-import com.kangce.finance.choumou.http.ohkttp.RetrofitManager
-import com.kangce.finance.choumou.http.service.ApiService
+import com.kangce.finance.http.exceptition.ApiException
+import com.kangce.finance.http.observer.HttpRxObservable
+import com.kangce.finance.http.observer.HttpRxObserver
+import com.kangce.finance.http.ohkttp.RetrofitManager
+import com.kangce.finance.http.service.ApiService
 import com.trello.rxlifecycle2.LifecycleProvider
 import io.reactivex.disposables.Disposable
 

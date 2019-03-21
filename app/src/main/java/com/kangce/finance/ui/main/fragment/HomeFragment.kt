@@ -1,7 +1,7 @@
 package com.kangce.finance.ui.main.fragment
 
 import com.kangce.finance.base.BaseFragment
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 
 class HomeFragment:BaseFragment() {
     override fun getLayoutId(): Int {

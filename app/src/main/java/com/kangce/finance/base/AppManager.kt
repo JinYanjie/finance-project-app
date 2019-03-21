@@ -2,7 +2,6 @@ package com.kangce.finance.base
 
 import android.app.Activity
 import android.content.Context
-import com.kangce.finance.utils.L.init
 import java.util.ArrayList
 
 class AppManager private constructor()  {

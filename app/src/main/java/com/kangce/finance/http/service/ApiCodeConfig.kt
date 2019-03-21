@@ -1,4 +1,4 @@
-package com.kangce.finance.choumou.http.service
+package com.kangce.finance.http.service
 
 object ApiCodeConfig {
     // 请求成功

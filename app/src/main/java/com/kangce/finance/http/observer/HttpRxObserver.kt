@@ -1,8 +1,8 @@
-package com.kangce.finance.choumou.http.observer
+package com.kangce.finance.http.observer
 
-import com.kangce.finance.choumou.http.exceptition.ApiException
-import com.kangce.finance.choumou.http.exceptition.ExceptionEngine
-import com.kangce.finance.choumou.http.service.ApiCodeConfig
+import com.kangce.finance.http.exceptition.ApiException
+import com.kangce.finance.http.exceptition.ExceptionEngine
+import com.kangce.finance.http.service.ApiCodeConfig
 import com.kangce.finance.event.TokenExpiredEvent
 import org.greenrobot.eventbus.EventBus
 

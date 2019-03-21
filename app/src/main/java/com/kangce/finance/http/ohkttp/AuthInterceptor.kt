@@ -1,8 +1,8 @@
-package com.kangce.finance.choumou.http.ohkttp
+package com.kangce.finance.http.ohkttp
 
 import com.kangce.finance.Constant
 import com.kangce.finance.MyApp
-import com.kangce.finance.choumou.utils.AppUtils
+import com.kangce.finance.utils.AppUtils
 import com.kangce.finance.utils.UserCacheHelper
 import okhttp3.Interceptor
 import okhttp3.Response

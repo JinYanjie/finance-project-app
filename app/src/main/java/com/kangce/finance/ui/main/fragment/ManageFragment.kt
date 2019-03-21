@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.kangce.finance.base.BaseFragment
 import com.kangce.finance.bean.ManagerItemBean
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 import com.kangce.finance.ui.manager.department.DepartmentActivity
 import com.kangce.finance.ui.manager.staff.StaffActivity
 

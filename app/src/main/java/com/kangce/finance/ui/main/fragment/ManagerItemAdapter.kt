@@ -3,7 +3,7 @@ package com.kangce.finance.ui.main.fragment
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.kangce.finance.bean.ManagerItemBean
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 
 class ManagerItemAdapter:BaseQuickAdapter<ManagerItemBean,BaseViewHolder> {
     constructor():super(R.layout.item_manager)

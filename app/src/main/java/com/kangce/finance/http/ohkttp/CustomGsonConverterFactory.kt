@@ -1,4 +1,4 @@
-package com.kangce.finance.choumou.http.ohkttp
+package com.kangce.finance.http.ohkttp
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

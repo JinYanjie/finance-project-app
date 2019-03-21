@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.kangce.finance.choumou">
+    package="com.kangce.finance">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -42,6 +42,11 @@
         <activity
             android:name="com.kangce.finance.ui.manager.staff.StaffActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kangce.finance.ui.manager.staff.AddStaffActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.kangce.finance.ui.manager.salary.SalaryActivity"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name="com.kangce.finance.ui.auth.LoginActivity"

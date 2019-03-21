@@ -1,4 +1,4 @@
-package com.kangce.finance.choumou.http.exceptition
+package com.kangce.finance.http.exceptition
 
 class ServerException() : RuntimeException() {
 

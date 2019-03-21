@@ -12,24 +12,22 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.kangce.finance.R;
-
-
 /**
  * 带一键删除的EditText 不需要设置DrawableRight
  */
-public class ClearEditText extends AppCompatEditText implements View.OnTouchListener, View.OnFocusChangeListener, TextWatcher {
+public class EditTextClear extends AppCompatEditText implements View.OnTouchListener, View.OnFocusChangeListener, TextWatcher {
     private Drawable mClearTextIcon;
     private OnFocusChangeListener mOnFocusChangeListener;
     private OnTouchListener mOnTouchListener;
-    public ClearEditText(final Context context) {
+    public EditTextClear(final Context context) {
         super(context);
         init(context);
     }
-    public ClearEditText(final Context context, final AttributeSet attrs) {
+    public EditTextClear(final Context context, final AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
-    public ClearEditText(final Context context, final AttributeSet attrs, final int defStyleAttr) {
+    public EditTextClear(final Context context, final AttributeSet attrs, final int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
     }

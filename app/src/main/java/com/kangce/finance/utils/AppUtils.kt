@@ -1,4 +1,4 @@
-package com.kangce.finance.choumou.utils
+package com.kangce.finance.utils
 
 import android.Manifest
 import android.content.Context

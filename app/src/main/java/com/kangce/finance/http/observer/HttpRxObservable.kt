@@ -1,4 +1,4 @@
-package com.kangce.finance.choumou.http.observer
+package com.kangce.finance.http.observer
 
 import com.kangce.finance.bean.DataBean
 import com.trello.rxlifecycle2.LifecycleProvider

@@ -3,7 +3,7 @@ package com.kangce.finance.ui.main.fragment
 import android.os.Bundle
 import android.view.View
 import com.kangce.finance.base.BaseFragment
-import com.kangce.finance.choumou.R
+import com.kangce.finance.R
 import com.kangce.finance.ui.auth.LoginActivity
 import com.kangce.finance.utils.UserCacheHelper
 import kotlinx.android.synthetic.main.fragment_me_layout.*

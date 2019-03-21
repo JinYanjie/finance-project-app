@@ -1,10 +1,13 @@
-package com.kangce.finance.choumou.http.service
+package com.kangce.finance.http.service
 
+import com.kangce.finance.bean.*
 import com.kangce.finance.bean.DataBean
 import com.kangce.finance.bean.DepartmentBean
 import com.kangce.finance.bean.LoginSuccess
 import com.kangce.finance.bean.Staff
 import io.reactivex.Observable
+import okhttp3.RequestBody
+import retrofit2.http.*
 import retrofit2.http.POST
 import retrofit2.http.Query
 
@@ -36,10 +39,22 @@ interface ApiService {
 
 
     /**
-     * 修改部门信息
+     * 获取员工信息
      */
     @POST("/staff/all")
     abstract fun getAllStaff(@Query("pageNum") pageNum: Int,@Query("pageSize") pageSize:Int): Observable<DataBean<Staff>>
+
+    /**
+     * 添加信息
+     */
+    @POST("/staff/add")
+    abstract fun addStaff( @Body info:RequestBody): Observable<DataBean<StaffBean>>
+
+    /**
+     * 获取已录入工资的员工
+     */
+    @POST("/salary/get/staffSalary")
+    abstract fun getEnterStaff(): Observable<DataBean<List<SBean>>>
 
 
 
