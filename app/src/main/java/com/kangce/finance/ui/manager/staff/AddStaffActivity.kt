@@ -2,13 +2,10 @@ package com.kangce.finance.ui.manager.staff
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.widget.LinearLayoutManager
-import android.text.Editable
+
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.View
-import com.chad.library.adapter.base.BaseQuickAdapter
-import com.chad.library.adapter.base.BaseViewHolder
 import com.google.gson.Gson
 import com.hjq.toast.ToastUtils
 import com.kangce.finance.base.BaseActivity

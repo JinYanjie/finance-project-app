@@ -5,14 +5,14 @@ import android.content.Intent
 import com.kangce.finance.base.BaseActivity
 import com.kangce.finance.R
 
-class AddSalaryActivity : BaseActivity() {
+class SalaryDetailActivity : BaseActivity() {
     override fun getLayoutId(): Int {
         return R.layout.activity_detail_salary
     }
 
     companion object {
         fun start(context: Context, sId: Int) {
-            val intent = Intent(context, AddSalaryActivity::class.java)
+            val intent = Intent(context, SalaryDetailActivity::class.java)
             intent.putExtra("sId", sId)
             context.startActivity(intent)
         }

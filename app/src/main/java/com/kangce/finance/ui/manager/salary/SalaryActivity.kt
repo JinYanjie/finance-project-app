@@ -8,11 +8,8 @@ import android.view.View
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.hjq.toast.ToastUtils
-import com.kangce.finance.base.BaseActivity
 import com.kangce.finance.base.BaseList.BaseListActivity
 import com.kangce.finance.bean.SBean
-import com.kangce.finance.bean.Staff
-import com.kangce.finance.bean.StaffBeanShorts
 import com.kangce.finance.R
 import com.kangce.finance.http.exceptition.ApiException
 import com.kangce.finance.http.observer.HttpRxObservable
@@ -21,6 +18,7 @@ import com.kangce.finance.http.ohkttp.RetrofitManager
 import com.kangce.finance.http.service.ApiService
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_salary.*
+import kotlinx.android.synthetic.main.title.*
 
 class SalaryActivity : BaseListActivity<SBean>() {
 
@@ -31,6 +29,17 @@ class SalaryActivity : BaseListActivity<SBean>() {
     companion object {
         fun start(context: Context) {
             context.startActivity(Intent(context, SalaryActivity::class.java))
+        }
+    }
+
+    override fun initView() {
+        super.initView()
+        back.setOnClickListener { finish() }
+        tvTitle.text = "薪资管理"
+        imgRight.visibility = View.VISIBLE
+        imgRight.setImageResource(R.drawable.add)
+        imgRight.setOnClickListener {
+//            UnSalaryActivity.start(this)
         }
     }
 
