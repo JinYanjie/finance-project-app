@@ -62,6 +62,9 @@
         <activity
             android:name="com.kangce.finance.ui.auth.RegisterActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.manager.userlevel.UserLevelActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

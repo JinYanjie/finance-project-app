@@ -75,4 +75,18 @@ interface ApiService {
                   @Query("password") password: String
     ): Observable<DataBean<LoginSuccess>>
 
+    /**
+     * 用户列表
+     */
+    @POST("/auth/allUser")
+    fun loadAllUser(): Observable<DataBean<List<UserEntity>>>
+
+    /**
+     * 修改用户权限
+     */
+    @POST("/auth/userLevelChange")
+    fun changeUserLevel(@Query("userId") userId: Int,
+                        @Query("newLevel") newLevel: Int
+                        ): Observable<DataBean<Any>>
+
 }

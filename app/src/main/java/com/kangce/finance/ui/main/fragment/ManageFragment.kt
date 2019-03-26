@@ -10,6 +10,7 @@ import com.kangce.finance.R
 import com.kangce.finance.ui.manager.department.DepartmentActivity
 import com.kangce.finance.ui.manager.salary.SalaryActivity
 import com.kangce.finance.ui.manager.staff.StaffActivity
+import com.kangce.finance.ui.manager.userlevel.UserLevelActivity
 
 class ManageFragment : BaseFragment() {
     var rv: RecyclerView? = null
@@ -29,6 +30,7 @@ class ManageFragment : BaseFragment() {
             var item = adapter.data[position] as ManagerItemBean
             when (item.name) {
                 "用户权限" -> {
+                    UserLevelActivity.start(context)
                 }
                 "部门管理" -> {
                     DepartmentActivity.start(activity as Context)

@@ -10,6 +10,9 @@ import java.net.SocketTimeoutException
 import java.text.ParseException
 
 object ExceptionEngine {
+    /**
+     * http code 文档:https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status
+     */
 
     val UN_KNOWN_ERROR = -10000//未知错误
     val ANALYTIC_SERVER_DATA_ERROR = -10001//解析(服务器)数据错误
@@ -19,7 +22,8 @@ object ExceptionEngine {
 
     fun handleException(e: Throwable): ApiException {
         val ex: ApiException
-        if (e is HttpException) {             //HTTP错误
+        if (e is HttpException) {
+            //HTTP错误
             ex = ApiException(e, e.code())
             ex.msg="网络不给力，请稍后再试" //均视为网络错误
             return ex
