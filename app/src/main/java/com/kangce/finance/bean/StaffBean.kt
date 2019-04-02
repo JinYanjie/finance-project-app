@@ -29,11 +29,3 @@ data class StaffBean(
         val state: Int
 )
 
-data class StaffBeanShorts(
-        val list: List<SBean>
-)
-
-data class SBean(
-        val name: String,
-        val id: Int
-)

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#fff"
     android:orientation="horizontal"
     android:paddingTop="2dp">
 
     <TextView
-        android:id="@+id/tvId"
+        android:id="@+id/tvStaffId"
         android:layout_width="120dp"
         android:layout_height="44dp"
         android:gravity="center_vertical"
@@ -17,7 +17,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/tvStaffName"
         android:layout_width="120dp"
         android:layout_height="44dp"
         android:gravity="center_vertical"

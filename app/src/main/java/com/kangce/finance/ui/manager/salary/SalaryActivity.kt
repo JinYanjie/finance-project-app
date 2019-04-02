@@ -9,8 +9,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.hjq.toast.ToastUtils
 import com.kangce.finance.base.BaseList.BaseListActivity
-import com.kangce.finance.bean.SBean
 import com.kangce.finance.R
+import com.kangce.finance.bean.SalaryUserBean
 import com.kangce.finance.http.exceptition.ApiException
 import com.kangce.finance.http.observer.HttpRxObservable
 import com.kangce.finance.http.observer.HttpRxObserver
@@ -20,7 +20,7 @@ import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_salary.*
 import kotlinx.android.synthetic.main.title.*
 
-class SalaryActivity : BaseListActivity<SBean>() {
+class SalaryActivity : BaseListActivity<SalaryUserBean>() {
 
     override fun getLayoutId(): Int {
         return R.layout.activity_salary
@@ -39,11 +39,11 @@ class SalaryActivity : BaseListActivity<SBean>() {
         imgRight.visibility = View.VISIBLE
         imgRight.setImageResource(R.drawable.add)
         imgRight.setOnClickListener {
-//            UnSalaryActivity.start(this)
+            UnSalaryActivity.start(this)
         }
     }
 
-    override fun bindAdapter(): BaseQuickAdapter<SBean, BaseViewHolder> {
+    override fun bindAdapter(): BaseQuickAdapter<SalaryUserBean, BaseViewHolder> {
         return Adapter()
     }
 
@@ -66,8 +66,8 @@ class SalaryActivity : BaseListActivity<SBean>() {
 
     private fun getEnterStaff() {
         var staff = RetrofitManager.retrofitManager.getRetrofit()
-                .create(ApiService::class.java).getEnterStaff()
-        HttpRxObservable.getObservable(staff, this).subscribe(object : HttpRxObserver<List<SBean>>() {
+                .create(ApiService::class.java).getEnterStaff(mPageNum,PAGE_SIZE)
+        HttpRxObservable.getObservable(staff, this).subscribe(object : HttpRxObserver<List<SalaryUserBean>>() {
             override fun onStart(d: Disposable) {
             }
 
@@ -75,25 +75,23 @@ class SalaryActivity : BaseListActivity<SBean>() {
                 ToastUtils.show(e.msg)
             }
 
-            override fun onSuccess(response: List<SBean>) {
+            override fun onSuccess(response: List<SalaryUserBean>) {
                 onSetLoadData(response)
             }
 
         })
     }
 
-    class Adapter : BaseQuickAdapter<SBean, BaseViewHolder> {
+    class Adapter : BaseQuickAdapter<SalaryUserBean, BaseViewHolder> {
         constructor() : super(R.layout.item_salary_staff)
 
-        override fun convert(helper: BaseViewHolder?, item: SBean?) {
+        override fun convert(helper: BaseViewHolder?, item: SalaryUserBean?) {
             if (item != null) {
                 with(item) {
-                    helper?.setText(R.id.tvId, id)
-                    helper?.setText(R.id.tvName, name)
+                    helper?.setText(R.id.tvStaffId, id)
+                    helper?.setText(R.id.tvStaffName, name)
                 }
             }
         }
-
-
     }
 }

@@ -54,9 +54,20 @@ interface ApiService {
      * 获取已录入工资的员工
      */
     @POST("/salary/get/staffSalary")
-    abstract fun getEnterStaff(): Observable<DataBean<List<SBean>>>
+    abstract fun getEnterStaff(@Query("pageNum") pageNum: Int,@Query("pageSize") pageSize:Int): Observable<DataBean<List<SalaryUserBean>>>
+
+    /**
+     * 获取未录入工资的员工
+     */
+    @POST("/salary/get/staffUnsalary")
+    abstract fun getUnSalaryStaff(@Query("pageNum") pageNum: Int,@Query("pageSize") pageSize:Int): Observable<DataBean<List<SalaryUserBean>>>
 
 
+    /**
+     * 获取社保税率
+     */
+    @POST("/rate/get")
+    fun getRate():Observable<DataBean<List<SocialRateBean>>>
 
 
     /**
@@ -68,7 +79,7 @@ interface ApiService {
     ): Observable<DataBean<LoginSuccess>>
 
     /**
-     * 用户登录
+     * 用户登
      */
     @POST("/auth/login")
     fun userLogin(@Query("phone") phone: String,
