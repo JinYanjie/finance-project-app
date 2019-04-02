@@ -1,7 +1,9 @@
 package com.kangce.finance.http.exceptition
 
+import android.util.Log
 import com.google.gson.JsonParseException
 import com.google.gson.stream.MalformedJsonException
+import com.kangce.finance.utils.L
 import org.json.JSONException
 import retrofit2.HttpException
 import java.net.ConnectException
@@ -45,6 +47,7 @@ object ExceptionEngine {
             ex.msg="连接服务器超时，请检查您的网络"
             return ex
         } else {  //未知错误
+            L.i(e.message)
             ex = ApiException(e, UN_KNOWN_ERROR)
             ex.msg="网络不给力，请重试"
             return ex

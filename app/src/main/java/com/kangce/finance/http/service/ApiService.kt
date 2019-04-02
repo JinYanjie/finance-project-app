@@ -89,4 +89,16 @@ interface ApiService {
                         @Query("newLevel") newLevel: Int
                         ): Observable<DataBean<Any>>
 
+
+    /**
+     * 获取所有固定资产列表
+     */
+    @POST("/fixedAssets/loadFixedAssetsList")
+    fun loadAllFixedAssetsList():Observable<DataBean<List<FixedAssetsEntity>>>
+
+    /**
+     * 获取所有资产类型
+     */
+    @POST("/fixedAssets/loadAllAssetType")
+    fun loadAllAssetType():Observable<DataBean<List<AssettypeEntity>>>
 }

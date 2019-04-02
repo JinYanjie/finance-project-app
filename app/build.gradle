@@ -62,4 +62,9 @@ dependencies {
 
     //轻量级数据存储框架
     implementation "com.orhanobut:hawk:2.0.1"
+
+    // 可直接使用内部wheelView滚动选择器 使用文档 https://github.com/gzu-liyujiang/AndroidPicker
+    implementation('cn.qqtheme.framework:WheelPicker:1.5.5') {
+        exclude group: 'com.android.support'
+    }
 }
