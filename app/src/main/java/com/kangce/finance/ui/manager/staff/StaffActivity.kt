@@ -85,7 +85,6 @@ class StaffActivity : BaseListActivity<StaffBean>() {
     }
 
 
-
     override fun getRecyclerView(): RecyclerView {
         return findViewById(R.id.recStaff)
     }

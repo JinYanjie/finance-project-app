@@ -46,8 +46,8 @@ object ExceptionEngine {
             ex = ApiException(e, TIME_OUT_ERROR)
             ex.msg="连接服务器超时，请检查您的网络"
             return ex
-        } else {  //未知错误
-            L.i(e.message)
+        }  else {  //未知错误
+            L.e(e.message)
             ex = ApiException(e, UN_KNOWN_ERROR)
             ex.msg="网络不给力，请重试"
             return ex

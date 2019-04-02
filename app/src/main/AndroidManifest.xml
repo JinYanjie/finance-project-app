@@ -45,8 +45,16 @@
         <activity
             android:name="com.kangce.finance.ui.manager.staff.AddStaffActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.kangce.finance.ui.manager.salary.SalaryActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.kangce.finance.ui.manager.salary.SalaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.manager.salary.UnSalaryActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.manager.salary.SalaryDetailActivity"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name="com.kangce.finance.ui.auth.LoginActivity"
@@ -57,10 +65,12 @@
         <activity
             android:name=".ui.manager.userlevel.UserLevelActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".ui.manager.salary.AddSalaryActivity"/>
 
         <activity
             android:name=".ui.fixedassets.FixedAssetsActivity"
             android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

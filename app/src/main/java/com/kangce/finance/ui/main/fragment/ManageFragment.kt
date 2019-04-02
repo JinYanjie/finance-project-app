@@ -8,6 +8,7 @@ import com.kangce.finance.base.BaseFragment
 import com.kangce.finance.bean.ManagerItemBean
 import com.kangce.finance.R
 import com.kangce.finance.ui.manager.department.DepartmentActivity
+import com.kangce.finance.ui.manager.salary.SalaryActivity
 import com.kangce.finance.ui.manager.staff.StaffActivity
 import com.kangce.finance.ui.manager.userlevel.UserLevelActivity
 
@@ -39,6 +40,9 @@ class ManageFragment : BaseFragment() {
                 }
                 "税率管理" -> {
                 }
+                "薪资管理" -> {
+                    SalaryActivity.start(activity as Context)
+                }
             }
         }
     }
@@ -47,6 +51,7 @@ class ManageFragment : BaseFragment() {
         val list = mutableListOf<ManagerItemBean>()
         list.add(ManagerItemBean(R.drawable.manage_ico_permissions, "用户权限"))
         list.add(ManagerItemBean(R.drawable.manage_ico_departments, "部门管理"))
+        list.add(ManagerItemBean(R.drawable.home_icon_transf, "薪资管理"))
         list.add(ManagerItemBean(R.drawable.manage_ico_staff, "职员管理"))
         list.add(ManagerItemBean(R.drawable.manage_ico_rate, "税率管理"))
         return list
