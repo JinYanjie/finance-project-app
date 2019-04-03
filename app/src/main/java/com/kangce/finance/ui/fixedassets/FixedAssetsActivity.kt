@@ -1,8 +1,11 @@
 package com.kangce.finance.ui.fixedassets
 
+import android.content.Context
+import android.content.Intent
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import android.widget.TextView
 
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
@@ -21,20 +24,18 @@ import kotlinx.android.synthetic.main.activity_common_list.*
 import kotlinx.android.synthetic.main.title.*
 
 class FixedAssetsActivity : BaseListActivity<FixedAssetsEntity>(), View.OnClickListener {
-    override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.back->{
-                finish()
-            }
-            R.id.right_button->{
-            }
-        }
-    }
+
 
     override fun getLayoutId(): Int {
         return R.layout.activity_common_list
     }
 
+    companion object {
+        fun start(context:Context?){
+            val intent = Intent(context, FixedAssetsActivity::class.java)
+            context?.startActivity(intent)
+        }
+    }
 
     override fun initView() {
         super.initView()
@@ -42,7 +43,9 @@ class FixedAssetsActivity : BaseListActivity<FixedAssetsEntity>(), View.OnClickL
         back.setOnClickListener(this)
         right_button.text = "添加"
         right_button.visibility = View.VISIBLE
+        right_button.setOnClickListener(this)
 
+        findViewById<TextView>(R.id.title).text ="固定资产列表"
 
     }
 
@@ -57,6 +60,18 @@ class FixedAssetsActivity : BaseListActivity<FixedAssetsEntity>(), View.OnClickL
     override fun onItemClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
 
     }
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.back->{
+                finish()
+            }
+            R.id.right_button->{
+                AssetsEditActivity.start(this)
+            }
+        }
+    }
+
 
     override fun loadListData() {
         HttpRxObservable
