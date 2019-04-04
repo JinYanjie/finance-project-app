@@ -112,4 +112,10 @@ interface ApiService {
      */
     @POST("/fixedAssets/loadAllAssetType")
     fun loadAllAssetType():Observable<DataBean<List<AssettypeEntity>>>
+
+    /**
+     * 获取所有资产变更方式
+     */
+    @POST("/fixedAssets/loadAllAssetChangeMode")
+    fun loadAllAssetChangeMode():Observable<DataBean<List<AssetsChangeMode>>>
 }

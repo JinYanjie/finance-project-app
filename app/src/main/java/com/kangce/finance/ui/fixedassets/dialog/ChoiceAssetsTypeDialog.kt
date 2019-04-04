@@ -3,14 +3,11 @@ package com.kangce.finance.ui.fixedassets.dialog
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
-import android.view.Display
 import android.view.Gravity
 import android.view.View
-import android.view.WindowManager
-import cn.qqtheme.framework.widget.WheelView
+import com.bigkoo.pickerview.adapter.ArrayWheelAdapter
 import com.kangce.finance.R
 import com.kangce.finance.bean.AssettypeEntity
-import com.kangce.finance.utils.AppUtils
 import com.kangce.finance.utils.DisplayUtil
 import kotlinx.android.synthetic.main.dialog_choice_assatetype.*
 
@@ -44,20 +41,12 @@ class ChoiceAssetsTypeDialog : Dialog, View.OnClickListener {
         tv_save.setOnClickListener(this)
         ll_root.setOnClickListener(this)
 
-        wv_wheel.setItems(nameList)
-        wv_wheel.setOffset(3)
-        wv_wheel.setCycleDisable(true)
-        wv_wheel.setTextSize(20f)
-        wv_wheel.setUseWeight(true)
-        val dividerConfig = WheelView.DividerConfig()
-        dividerConfig.setRatio(WheelView.DividerConfig.FILL)
-        wv_wheel.setDividerConfig(dividerConfig)
-
-        wv_wheel.setOnItemSelectListener(WheelView.OnItemSelectListener { index ->
-            currentIndex = index
-        })
-        wv_wheel.setSelectedIndex(0)
-
+        wv_wheel.adapter = ArrayWheelAdapter(nameList)
+        wv_wheel.setOnItemSelectedListener {
+            currentIndex = it
+        }
+        wv_wheel.currentItem = 0
+        wv_wheel.setCyclic(false)
 
     }
 
@@ -71,14 +60,8 @@ class ChoiceAssetsTypeDialog : Dialog, View.OnClickListener {
             nameList?.add(item.aname)
         }
 
-
-
-
     }
 
-    override fun show() {
-        super.show()
-    }
 
 
     override fun onClick(v: View?) {
