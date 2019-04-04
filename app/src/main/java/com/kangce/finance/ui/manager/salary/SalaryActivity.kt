@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import android.widget.TextView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.hjq.toast.ToastUtils
@@ -60,13 +61,12 @@ class SalaryActivity : BaseListActivity<SalaryUserBean>() {
     }
 
     override fun onItemClick(adapter: BaseQuickAdapter<*, *>?, view: View?, position: Int) {
-
-
+        SalaryDetailActivity.start(this, (adapter?.data as List<SalaryUserBean>)[position].id)
     }
 
     private fun getEnterStaff() {
         var staff = RetrofitManager.retrofitManager.getRetrofit()
-                .create(ApiService::class.java).getEnterStaff(mPageNum,PAGE_SIZE)
+                .create(ApiService::class.java).getEnterStaff(mPageNum, PAGE_SIZE)
         HttpRxObservable.getObservable(staff, this).subscribe(object : HttpRxObserver<List<SalaryUserBean>>() {
             override fun onStart(d: Disposable) {
             }
@@ -88,8 +88,8 @@ class SalaryActivity : BaseListActivity<SalaryUserBean>() {
         override fun convert(helper: BaseViewHolder?, item: SalaryUserBean?) {
             if (item != null) {
                 with(item) {
-                    helper?.setText(R.id.tvStaffId, id)
-                    helper?.setText(R.id.tvStaffName, name)
+                    helper?.getView<TextView>(R.id.tvStaffId)!!.text = item.id.toString()
+                    helper?.getView<TextView>(R.id.tvStaffName)!!.text = name
                 }
             }
         }

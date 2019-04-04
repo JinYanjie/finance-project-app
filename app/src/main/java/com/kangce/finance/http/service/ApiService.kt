@@ -69,6 +69,17 @@ interface ApiService {
     @POST("/rate/get")
     fun getRate():Observable<DataBean<List<SocialRateBean>>>
 
+    /**
+     * 添加信息
+     */
+    @POST("/salary/add")
+    abstract fun addSalary( @Body info:RequestBody): Observable<DataBean<SalaryBean>>
+
+    /**
+     * 获取指定员工 工资详情
+     */
+    @POST("/salary/get")
+    fun getStaffSalary(@Query("sId") id: Int):Observable<DataBean<SalaryBean>>
 
     /**
      * 用户注册

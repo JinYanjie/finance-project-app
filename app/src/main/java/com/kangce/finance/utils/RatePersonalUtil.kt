@@ -97,5 +97,4 @@ class RatePersonalUtil {
                    var personalRate: Double,
                    var reallySalary: Double)
 
-
 }

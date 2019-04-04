@@ -17,24 +17,4 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="MyItem">
-        <attr name="item_left_name" format="string"/>
-        <attr name="item_right_name" format="string"/>
-        <attr name="item_middle_name" format="string"/>
-        <attr name="item_view_line" format="enum">
-            <enum name="visible" value="0"/>
-            <enum name="unvisible" value="1"/>
-            <enum name="gone" value="2"/>
-        </attr>
-        <attr name="item_tv_middle" format="enum">
-            <enum name="visible" value="0"/>
-            <enum name="unvisible" value="1"/>
-            <enum name="gone" value="2"/>
-        </attr>
-        <attr name="item_tv_right" format="enum">
-            <enum name="visible" value="0"/>
-            <enum name="unvisible" value="1"/>
-            <enum name="gone" value="2"/>
-        </attr>
-    </declare-styleable>
 </resources>
