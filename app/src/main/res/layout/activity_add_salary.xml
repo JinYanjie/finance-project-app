@@ -160,13 +160,14 @@
                     style="@style/tv_name"
                     android:text="加班工资：" />
 
-                <TextView
+                <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvAddSalary"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@null"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp"
-                    android:textColor="#333" />
+                    android:inputType="numberDecimal"/>
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
@@ -248,13 +249,14 @@
                     style="@style/tv_name"
                     android:text="公积金基数：" />
 
-                <TextView
+                <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvReservedFundsRate"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@null"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp"
-                    android:textColor="#333" />
+                    android:inputType="numberDecimal"/>
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
@@ -275,7 +277,8 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
-                    android:paddingRight="12dp" />
+                    android:paddingRight="12dp"
+                    android:enabled="false"/>
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
@@ -296,11 +299,12 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
-                    android:paddingRight="12dp" />
+                    android:paddingRight="12dp"
+                    android:inputType="numberDecimal"/>
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
-            <!--身份证号码-->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
@@ -317,11 +321,12 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
-                    android:paddingRight="12dp" />
+                    android:paddingRight="12dp"
+                    android:enabled="false"/>
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
-            <!--银行名称-->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
@@ -338,7 +343,8 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
-                    android:paddingRight="12dp" />
+                    android:paddingRight="12dp"
+                    android:inputType="numberDecimal"/>
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
@@ -359,7 +365,8 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
-                    android:paddingRight="12dp" />
+                    android:paddingRight="12dp"
+                    android:enabled="false"/>
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
@@ -380,10 +387,13 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
-                    android:paddingRight="12dp" />
+                    android:paddingRight="12dp"
+                    android:inputType="numberDecimal"/>
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -396,6 +406,7 @@
                     android:text="失业保险：" />
 
                 <com.kangce.finance.widget.EditTextClear
+                    android:enabled="false"
                     android:id="@+id/tvLossJob"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -409,6 +420,140 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="子女教育：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvChildEdu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:paddingRight="12dp"
+                    android:inputType="numberDecimal"/>
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="继续教育：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvContinueEdu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:paddingRight="12dp"
+                    android:inputType="numberDecimal"/>
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="大病医疗：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvBigDisease"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:paddingRight="12dp"
+                    android:inputType="numberDecimal"/>
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="住房贷款利息：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvHomeLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:paddingRight="12dp"
+                    android:inputType="numberDecimal"/>
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="住房租金：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvHomeRent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:paddingRight="12dp"
+                    android:inputType="numberDecimal"/>
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="赡养老人：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:inputType="numberDecimal"
+                    android:id="@+id/tvHelpOld"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:paddingRight="12dp"
+                    />
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/white"
                 android:orientation="horizontal">
 
@@ -421,6 +566,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
+                    android:inputType="numberDecimal"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp" />
 
@@ -438,6 +584,7 @@
                     android:text="其他扣除：" />
 
                 <com.kangce.finance.widget.EditTextClear
+                    android:inputType="numberDecimal"
                     android:id="@+id/tvOthersFee"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -460,7 +607,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:enabled="false"
-                    android:id="@+id/personalRate"
+                    android:id="@+id/tvPersonalRate"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"

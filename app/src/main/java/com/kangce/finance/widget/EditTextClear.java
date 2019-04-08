@@ -1,6 +1,7 @@
 package com.kangce.finance.widget;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.graphics.drawable.DrawableCompat;
@@ -12,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.kangce.finance.R;
+
 /**
  * 带一键删除的EditText 不需要设置DrawableRight
  */
@@ -19,18 +21,22 @@ public class EditTextClear extends AppCompatEditText implements View.OnTouchList
     private Drawable mClearTextIcon;
     private OnFocusChangeListener mOnFocusChangeListener;
     private OnTouchListener mOnTouchListener;
+
     public EditTextClear(final Context context) {
         super(context);
         init(context);
     }
+
     public EditTextClear(final Context context, final AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
+
     public EditTextClear(final Context context, final AttributeSet attrs, final int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
     }
+
     private void init(final Context context) {
         final Drawable drawable = ContextCompat.getDrawable(context, getClearTextIcon());
         final Drawable wrappedDrawable = DrawableCompat.wrap(drawable);
@@ -86,10 +92,11 @@ public class EditTextClear extends AppCompatEditText implements View.OnTouchList
             setClearIconVisible(text.length() > 0);
         }
     }
+
     private void setClearIconVisible(final boolean visible) {
         mClearTextIcon.setVisible(visible, false);
         final Drawable[] compoundDrawables = getCompoundDrawables();
-        setCompoundDrawables(compoundDrawables[0],compoundDrawables[1],visible ? mClearTextIcon : null,compoundDrawables[3]);
+        setCompoundDrawables(compoundDrawables[0], compoundDrawables[1], visible ? mClearTextIcon : null, compoundDrawables[3]);
     }
 
     @Override
@@ -101,6 +108,7 @@ public class EditTextClear extends AppCompatEditText implements View.OnTouchList
     public void afterTextChanged(Editable s) {
 
     }
+
     private OnTextClearListener mListener;
 
     public interface OnTextClearListener {
@@ -118,9 +126,10 @@ public class EditTextClear extends AppCompatEditText implements View.OnTouchList
 
     /**
      * 获取右侧的小图片
+     *
      * @return
      */
-    public int getClearTextIcon(){
+    public int getClearTextIcon() {
         return R.drawable.ic_close;
     }
 }

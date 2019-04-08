@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -122,6 +123,7 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
@@ -143,6 +145,7 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
@@ -158,13 +161,14 @@
                     style="@style/tv_name"
                     android:text="加班工资：" />
 
-                <TextView
+                <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvAddSalary"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@null"
                     android:gravity="end|center_vertical"
-                    android:paddingRight="12dp"
-                    android:textColor="#333" />
+                    android:inputType="numberDecimal"
+                    android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
@@ -185,6 +189,7 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
@@ -206,6 +211,7 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
@@ -227,6 +233,7 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
@@ -243,13 +250,14 @@
                     style="@style/tv_name"
                     android:text="公积金基数：" />
 
-                <TextView
+                <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvReservedFundsRate"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@null"
                     android:gravity="end|center_vertical"
-                    android:paddingRight="12dp"
-                    android:textColor="#333" />
+                    android:inputType="numberDecimal"
+                    android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
@@ -269,6 +277,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
+                    android:enabled="false"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp" />
 
@@ -291,11 +300,12 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
-            <!--身份证号码-->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
@@ -311,12 +321,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
+                    android:enabled="false"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
-            <!--银行名称-->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
@@ -333,6 +344,7 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
@@ -353,6 +365,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
+                    android:enabled="false"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp" />
 
@@ -375,10 +388,12 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -395,7 +410,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
+                    android:enabled="false"
                     android:gravity="end|center_vertical"
+                    android:paddingRight="12dp" />
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="子女教育：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvChildEdu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
@@ -409,6 +448,118 @@
 
                 <TextView
                     style="@style/tv_name"
+                    android:text="继续教育：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvContinueEdu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="12dp" />
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="大病医疗：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvBigDisease"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="12dp" />
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="住房贷款利息：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvHomeLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="12dp" />
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="住房租金：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvHomeRent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="12dp" />
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="赡养老人：" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvHelpOld"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="12dp" />
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
                     android:text="考勤扣除：" />
 
                 <com.kangce.finance.widget.EditTextClear
@@ -417,6 +568,7 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
@@ -438,6 +590,7 @@
                     android:layout_height="match_parent"
                     android:background="@null"
                     android:gravity="end|center_vertical"
+                    android:inputType="numberDecimal"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
@@ -454,16 +607,39 @@
                     android:text="个人所得税" />
 
                 <com.kangce.finance.widget.EditTextClear
-                    android:enabled="false"
-                    android:id="@+id/personalRate"
+                    android:id="@+id/tvPersonalRate"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
+                    android:enabled="false"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp" />
 
                 <include layout="@layout/line_left_12" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_name"
+                    android:text="实发工资" />
+
+                <com.kangce.finance.widget.EditTextClear
+                    android:id="@+id/tvReallySalary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:gravity="end|center_vertical"
+                    android:paddingRight="12dp" />
+
+                <include layout="@layout/line_left_12" />
+            </LinearLayout>
+
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </LinearLayout>
