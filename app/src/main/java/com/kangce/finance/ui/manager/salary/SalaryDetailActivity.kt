@@ -2,6 +2,7 @@ package com.kangce.finance.ui.manager.salary
 
 import android.content.Context
 import android.content.Intent
+import android.view.View
 import com.hjq.toast.ToastUtils
 import com.kangce.finance.base.BaseActivity
 import com.kangce.finance.R
@@ -14,6 +15,7 @@ import com.kangce.finance.http.ohkttp.RetrofitManager
 import com.kangce.finance.http.service.ApiService
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_detail_salary.*
+import kotlinx.android.synthetic.main.title.*
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -35,8 +37,12 @@ class SalaryDetailActivity : BaseActivity() {
 
     override fun initView() {
         super.initView()
+        tvTitle.text = "工资详情"
+        back.setOnClickListener { finish() }
+        imgRight.visibility = View.GONE
         sId = intent.getIntExtra("sId", 0)
         getData(sId)
+
     }
 
     private fun getData(sId: Int) {
