@@ -182,6 +182,9 @@ class AssetsEditActivity : BaseActivity(), View.OnClickListener {
 
     }
 
+    /**
+     * 上传新资产
+     */
     private fun startAddAssets(bean: FixedAssetsEntity) {
         HttpRxObservable
                 .getObservable(RetrofitManager.retrofitManager.getRetrofit().create(ApiService::class.java).addFixedAssets(bean), this)
