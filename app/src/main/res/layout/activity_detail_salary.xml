@@ -32,7 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
-                    android:enabled="false"
+                    android:focusable="false"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp" />
 
@@ -51,11 +51,11 @@
                     android:text="职员编号：" />
 
                 <com.kangce.finance.widget.EditTextClear
+                    android:focusable="false"
                     android:id="@+id/tvSId"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
-                    android:enabled="false"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp" />
 
@@ -73,11 +73,11 @@
                     android:text="职员状态：" />
 
                 <com.kangce.finance.widget.EditTextClear
+                    android:focusable="false"
                     android:id="@+id/tvState"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
-                    android:enabled="false"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp" />
 
@@ -95,6 +95,7 @@
                     android:text="工资日期：" />
 
                 <com.kangce.finance.widget.EditTextClear
+                    android:focusable="false"
                     android:id="@+id/tvDate"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -119,6 +120,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvBase"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -141,6 +143,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvJobSalary"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -163,6 +166,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvAddSalary"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -185,6 +189,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvPerformSalary"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -207,6 +212,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvBonus"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -229,6 +235,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvWelfare"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -252,6 +259,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvReservedFundsRate"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -274,6 +282,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvReservedFunds"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -296,6 +305,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvPensionRate"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -318,6 +328,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvPension"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -340,6 +351,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvMedicalRate"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -362,6 +374,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvMedical"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -384,6 +397,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvLossJobRate"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -407,6 +421,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvLossJob"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -429,6 +444,7 @@
                     android:text="子女教育：" />
 
                 <com.kangce.finance.widget.EditTextClear
+                    android:focusable="false"
                     android:id="@+id/tvChildEdu"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -452,6 +468,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvContinueEdu"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -474,6 +491,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvBigDisease"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -497,6 +515,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvHomeLoan"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -519,6 +538,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvHomeRent"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -541,6 +561,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvHelpOld"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -564,6 +585,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvAttendance"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -586,6 +608,7 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvOthersFee"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
@@ -608,10 +631,10 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvPersonalRate"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
-                    android:enabled="false"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp" />
 
@@ -630,10 +653,10 @@
 
                 <com.kangce.finance.widget.EditTextClear
                     android:id="@+id/tvReallySalary"
+                    android:focusable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
-                    android:enabled="false"
                     android:gravity="end|center_vertical"
                     android:paddingRight="12dp" />
 
