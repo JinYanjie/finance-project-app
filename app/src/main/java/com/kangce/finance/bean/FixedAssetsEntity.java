@@ -3,7 +3,7 @@ package com.kangce.finance.bean;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class FixedAssetsEntity {
+public class FixedAssetsEntity extends BaseEntity{
 
     /**
      * 主键id

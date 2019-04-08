@@ -20,6 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
            >
 
             <LinearLayout
@@ -73,7 +75,7 @@
                     android:textSize="16sp"/>
 
                 <TextView
-                    android:id="@+id/et_assetsType"
+                    android:id="@+id/tv_assetsType"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -193,7 +195,7 @@
                     android:textSize="16sp"/>
 
                 <TextView
-                    android:id="@+id/tv_assetsType"
+                    android:id="@+id/tv_inputDate"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -552,74 +554,85 @@
 
 
             <LinearLayout
+                android:id="@+id/ll_countDepreciationi"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/assets_line_height"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/assets_line_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*预计使用期间数"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/et_user_time_count"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="请输入月数"
+                        android:inputType="number"
+                        android:background="@color/transparent"
+                        android:gravity="right|center_vertical"
+                        android:textSize="16sp"
+                        android:textColor="@color/text666"
+                        android:layout_marginRight="5dp"/>
+
+                </LinearLayout>
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="*预计使用期间数"
-                    android:textSize="16sp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/service_gray_color"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
 
-                <EditText
-                    android:id="@+id/et_user_time_count"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:hint="请输入月数"
-                    android:inputType="number"
-                    android:background="@color/transparent"
-                    android:gravity="right|center_vertical"
-                    android:textSize="16sp"
-                    android:textColor="@color/text666"
-                    android:layout_marginRight="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/assets_line_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*月折旧率(%)"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/et_monthDepreciation"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="请输入月折旧率"
+                        android:background="@color/transparent"
+                        android:gravity="right|center_vertical"
+                        android:textSize="16sp"
+                        android:textColor="@color/text666"
+                        android:layout_marginRight="5dp"/>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/service_gray_color"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+
 
             </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/service_gray_color"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/assets_line_height"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="*月折旧率(%)"
-                    android:textSize="16sp"/>
-
-                <EditText
-                    android:id="@+id/et_monthDepreciation"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:hint="请输入月折旧率"
-                    android:background="@color/transparent"
-                    android:gravity="right|center_vertical"
-                    android:textSize="16sp"
-                    android:textColor="@color/text666"
-                    android:layout_marginRight="5dp"/>
-
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/service_gray_color"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
 
 
             <TextView
