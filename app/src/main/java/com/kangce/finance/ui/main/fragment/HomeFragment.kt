@@ -31,6 +31,9 @@ class HomeFragment:BaseFragment(), View.OnClickListener {
             R.id.iv_fixedAssets->{
                 FixedAssetsActivity.start(context)
             }
+            R.id.iv_entryCertificate->{
+
+            }
         }
     }
 
