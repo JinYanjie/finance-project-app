@@ -169,7 +169,7 @@ class AssetsEditActivity : BaseActivity(), View.OnClickListener {
                     bean.monthDepreciation = monthDepreciation.toFloat()
                 }
 
-
+                startAddAssets(bean)
 
 
 
@@ -180,6 +180,27 @@ class AssetsEditActivity : BaseActivity(), View.OnClickListener {
 
         }
 
+    }
+
+    private fun startAddAssets(bean: FixedAssetsEntity) {
+        HttpRxObservable
+                .getObservable(RetrofitManager.retrofitManager.getRetrofit().create(ApiService::class.java).addFixedAssets(bean), this)
+                .subscribe(object : HttpObserver<Any>() {
+                    override fun onStart(d: Disposable) {
+                        showLoading()
+                    }
+
+                    override fun onError(e: ApiException) {
+                        closeLoading()
+                        T.showShort("编辑失败: ${e.msg}")
+                    }
+
+                    override fun onSuccess(response: Any) {
+                        closeLoading()
+                        T.showShort("编辑成功!")
+                        finish()
+                    }
+                })
     }
 
     private fun showUseStatusPick() {

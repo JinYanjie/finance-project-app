@@ -10,6 +10,7 @@ import okhttp3.RequestBody
 import retrofit2.http.*
 import retrofit2.http.POST
 import retrofit2.http.Query
+import java.util.*
 
 interface ApiService {
 
@@ -118,4 +119,10 @@ interface ApiService {
      */
     @POST("/fixedAssets/loadAllAssetChangeMode")
     fun loadAllAssetChangeMode():Observable<DataBean<List<AssetsChangeMode>>>
+
+    /**
+     * 新增资产条目
+     */
+    @POST("/fixedAssets/add")
+    fun addFixedAssets(@Body assets:FixedAssetsEntity):Observable<DataBean<Any>>
 }
