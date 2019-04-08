@@ -10,7 +10,6 @@ import okhttp3.RequestBody
 import retrofit2.http.*
 import retrofit2.http.POST
 import retrofit2.http.Query
-import java.util.*
 
 interface ApiService {
 
@@ -118,6 +117,12 @@ interface ApiService {
      */
     @POST("/fixedAssets/loadFixedAssetsList")
     fun loadAllFixedAssetsList():Observable<DataBean<List<FixedAssetsEntity>>>
+
+    /**
+     * 根据id获取固定资产详情
+     */
+    @POST("/fixedAssets/loadFixedAssetsById")
+    fun loadFixedAssetsById(assetsId: Int):Observable<DataBean<FixedAssetsEntity>>
 
     /**
      * 获取所有资产类型

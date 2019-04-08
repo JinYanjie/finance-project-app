@@ -71,7 +71,7 @@
             android:name=".ui.fixedassets.FixedAssetsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.fixedassets.AssetsEditActivity"
+            android:name=".ui.fixedassets.AssetsCreateActivity"
             android:screenOrientation="portrait" />
 
     </application>
