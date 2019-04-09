@@ -59,6 +59,40 @@
                 android:layout_marginRight="10dp"/>
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/assets_line_height"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*资产编号"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/et_assetsCode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="right|center_vertical"
+                    android:textSize="16sp"
+                    android:textColor="@color/text666"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/service_gray_color"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
                 android:id="@+id/ll_pickAssetsType"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/assets_line_height"
@@ -302,6 +336,7 @@
                     android:textColor="@color/text666"/>
 
                 <ImageView
+                    android:id="@+id/img_changeWayArrow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -574,6 +609,42 @@
                     android:background="@color/service_gray_color"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"/>
+
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/assets_line_height"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_marginRight="15dp">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="已经使用的月数"-->
+                        <!--android:textSize="16sp"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/et_usedTimeCount"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:background="@color/transparent"-->
+                        <!--android:gravity="right|center_vertical"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:textColor="@color/text666"-->
+                        <!--android:layout_marginRight="5dp"-->
+                        <!--android:inputType="numberDecimal"/>-->
+
+                <!--</LinearLayout>-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:background="@color/service_gray_color"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"/>-->
 
 
             </LinearLayout>

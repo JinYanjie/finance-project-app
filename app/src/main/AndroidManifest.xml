@@ -73,6 +73,11 @@
         <activity
             android:name=".ui.fixedassets.AssetsCreateActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fixedassets.AssetsEditActivity"
+            android:screenOrientation="portrait" />
+
+
         <activity android:name=".ui.entry_certificate.EntryCertificate"
             android:screenOrientation="portrait"/>
     </application>

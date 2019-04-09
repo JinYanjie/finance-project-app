@@ -62,7 +62,7 @@ class AssetsCreateActivity : BaseActivity(), View.OnClickListener {
         super.initView()
 
         back.setOnClickListener(this)
-        findViewById<TextView>(R.id.title).text = "编辑固定资产条目"
+        findViewById<TextView>(R.id.title).text = "添加固定资产"
         ll_pickAssetsType.setOnClickListener(this)
         ll_pickInputTime.setOnClickListener(this)
         ll_pickUseStatus.setOnClickListener(this)
@@ -314,7 +314,9 @@ class AssetsCreateActivity : BaseActivity(), View.OnClickListener {
 
         val list = ArrayList<String>()
         for (item in AssetsChangeModeList!!) {
-            list.add(item.mname)
+            if(item.fid==0){
+                list.add(item.mname)
+            }
         }
 
         val userStatusPick = OptionsPickerBuilder(this, object : OnOptionsSelectListener {

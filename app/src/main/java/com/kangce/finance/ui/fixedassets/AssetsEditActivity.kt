@@ -3,6 +3,9 @@ package com.kangce.finance.ui.fixedassets
 import android.content.Context
 import android.content.Intent
 import android.view.View
+import android.widget.TextView
+import com.bigkoo.pickerview.builder.OptionsPickerBuilder
+import com.bigkoo.pickerview.listener.OnOptionsSelectListener
 import com.hjq.toast.ToastUtils
 import com.kangce.finance.R
 import com.kangce.finance.base.BaseActivity
@@ -18,10 +21,11 @@ import com.kangce.finance.http.service.ApiService
 import com.kangce.finance.utils.T
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_assets_edit.*
+import kotlinx.android.synthetic.main.layout_topbar_back_title.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AssetsEditActivity : BaseActivity() {
+class AssetsEditActivity : BaseActivity(), View.OnClickListener {
 
     val format by lazy { SimpleDateFormat("yyyy-MM-dd") }
 
@@ -56,9 +60,29 @@ class AssetsEditActivity : BaseActivity() {
             return
         }
 
+        back.setOnClickListener(this)
+        findViewById<TextView>(R.id.title).text = "编辑固定资产"
+        tv_confirm.setOnClickListener(this)
+
         loadAllAssetChangeMode()
 
     }
+
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.back->{
+                finish()
+            }
+            R.id.ll_pickChange->{
+                showAssetsChangePick()
+            }
+            R.id.tv_confirm->{
+                saveAssetsChange()
+            }
+        }
+    }
+
 
 
     /**
@@ -98,7 +122,13 @@ class AssetsEditActivity : BaseActivity() {
             override fun onSuccess(response: List<DepartmentBean>) {
                 departmentList = response
 
-                tv_department.text = response.get(assetsEntity?.departmentUse!!).name
+                for(item in response){
+                    if(item.id == assetsEntity?.departmentUse){
+                        tv_department.text = item.name
+                    }
+                }
+
+
             }
 
         })
@@ -129,11 +159,14 @@ class AssetsEditActivity : BaseActivity() {
     }
 
     private fun initViewData() {
-        if (assetsEntity==null){
+        if (assetsEntity==null
+                ||AssetsChangeModeList==null){
             return
         }
 
+
         et_assetsName.text = assetsEntity?.assetsName
+        et_assetsCode.text = assetsEntity?.assetsCode
         tv_assetsType.text = when(assetsEntity?.assetsType) {
             1->"房屋及建筑物"
             2->"生产设备"
@@ -168,14 +201,109 @@ class AssetsEditActivity : BaseActivity() {
             et_monthDepreciation.text = assetsEntity?.monthDepreciation.toString()
             val monthDifferent = monthDifferent(assetsEntity?.inputTime!!, Date())
             val initValue = assetsEntity?.initialAssetValue?.toDouble() ?:0.0
-            val nowValue = initValue - (initValue * (monthDifferent * assetsEntity?.monthDepreciation!!))
+            val nowValue = initValue - (initValue * (monthDifferent * assetsEntity?.monthDepreciation!!)*0.01)
+
+//            et_usedTimeCount.text = monthDifferent.toString()
             et_worthCount.text = nowValue.toString()
 
         }else{
             ll_countDepreciationi.visibility = View.GONE
             et_worthCount.text = assetsEntity?.initialAssetValue.toString()
         }
+
+
+
+        //是否已经无效
+        for (item in AssetsChangeModeList!!){
+            if(item.id == assetsEntity?.changeWay){
+                when(item.fid){
+                    0->{
+                        //未出售
+                        ll_pickChange.setOnClickListener(this)
+
+                        img_changeWayArrow.visibility = View.VISIBLE
+                        tv_confirm.visibility = View.VISIBLE
+                    }
+                    1->{
+                        //已出售
+                        ll_pickChange.setOnClickListener(null)
+                        img_changeWayArrow.visibility = View.GONE
+                        tv_confirm.visibility = View.GONE
+                        et_worthCount.text = "0"
+                    }
+                }
+            }
+        }
     }
+
+
+    private fun showAssetsChangePick() {
+        if (AssetsChangeModeList == null) {
+            return
+        }
+
+        val list = ArrayList<String>()
+        for (item in AssetsChangeModeList!!) {
+            if(item.fid==1){
+                list.add(item.mname)
+            }
+        }
+
+        val userStatusPick = OptionsPickerBuilder(this, object : OnOptionsSelectListener {
+            override fun onOptionsSelect(options1: Int, options2: Int, options3: Int, v: View?) {
+                if(AssetsChangeModeList==null){
+                    return
+                }
+
+                tv_changeWay.text = list.get(options1)
+
+                for (item in AssetsChangeModeList!!){
+                    if(item.mname.equals(list.get(options1))){
+                        tv_changeWay.tag = item
+                    }
+                }
+            }
+        })
+                .build<String>()
+        userStatusPick.setPicker(list)
+        userStatusPick.show()
+    }
+
+
+    /**
+     * 编辑资产变更方式
+     */
+    private fun saveAssetsChange() {
+
+        val tag = tv_changeWay.getTag()
+        if(tag==null){
+            T.showShort("请选择资产变更类型")
+            return
+        }
+        val changeWay = (tag as AssetsChangeMode).id
+
+        HttpRxObservable
+                .getObservable(RetrofitManager.retrofitManager.getRetrofit().create(ApiService::class.java).editChangeWay(assetsId,changeWay), this)
+                .subscribe(object : HttpObserver<Any>() {
+                    override fun onStart(d: Disposable) {
+                        showLoading()
+                    }
+
+                    override fun onError(e: ApiException) {
+                        closeLoading()
+                        T.showShort(e.msg)
+                    }
+
+                    override fun onSuccess(response: Any) {
+                        closeLoading()
+                        T.showShort("编辑成功!")
+                        finish()
+                    }
+                })
+
+    }
+
+
 
     /**
      * 计算两个时间之间的月差

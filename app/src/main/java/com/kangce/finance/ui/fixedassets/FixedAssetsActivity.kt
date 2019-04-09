@@ -35,6 +35,12 @@ class FixedAssetsActivity : BaseListActivity<FixedAssetsEntity>(), View.OnClickL
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+
+        authRefresh()
+    }
+
     override fun initView() {
         super.initView()
 
@@ -57,6 +63,7 @@ class FixedAssetsActivity : BaseListActivity<FixedAssetsEntity>(), View.OnClickL
 
     override fun onItemClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
         val entity = getAdapter().data.get(position)
+        AssetsEditActivity.start(this,entity.id)
     }
 
     override fun onClick(v: View?) {
@@ -87,4 +94,9 @@ class FixedAssetsActivity : BaseListActivity<FixedAssetsEntity>(), View.OnClickL
 
                 })
     }
+
+    override fun isOpenAuthRefresh(): Boolean {
+        return false
+    }
+
 }

@@ -122,7 +122,7 @@ interface ApiService {
      * 根据id获取固定资产详情
      */
     @POST("/fixedAssets/loadFixedAssetsById")
-    fun loadFixedAssetsById(assetsId: Int):Observable<DataBean<FixedAssetsEntity>>
+    fun loadFixedAssetsById(@Query("assetsId") assetsId: Int):Observable<DataBean<FixedAssetsEntity>>
 
     /**
      * 获取所有资产类型
@@ -141,4 +141,11 @@ interface ApiService {
      */
     @POST("/fixedAssets/add")
     fun addFixedAssets(@Body assets:FixedAssetsEntity):Observable<DataBean<Any>>
+
+    /**
+     * 修改资产变动方式
+     */
+    @POST("/fixedAssets/editChangeWay")
+    fun editChangeWay(@Query("id") id: Int,
+                      @Query("changWay") changWay: Int):Observable<DataBean<Any>>
 }
