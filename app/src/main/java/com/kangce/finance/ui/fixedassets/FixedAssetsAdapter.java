@@ -20,7 +20,7 @@ public class FixedAssetsAdapter extends BaseQuickAdapter<FixedAssetsEntity,BaseV
         helper.setText(R.id.tv_assetsCode,"编号: "+item.getAssetsCode());
         helper.setText(R.id.tv_inputDate,"入账时间: "+simpleDateFormat.format(item.getInputTime()));
 
-        helper.setText(R.id.tv_cash,"资产原值: "+item.getInitialAssetValue().toString());
+        helper.setText(R.id.tv_cash,item.getInitialAssetValue().toString());
         switch (item.getChangeWay()){
             case 1:
                 helper.setText(R.id.tv_change,"购入");

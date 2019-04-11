@@ -10,11 +10,9 @@ import android.widget.TextView
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.kangce.finance.R
-import com.kangce.finance.base.BaseActivity
 import com.kangce.finance.base.BaseList.BaseListActivity
 import com.kangce.finance.bean.FixedAssetsEntity
 import com.kangce.finance.http.exceptition.ApiException
-import com.kangce.finance.http.observer.HttpObserver
 import com.kangce.finance.http.observer.HttpRxObservable
 import com.kangce.finance.http.observer.HttpRxObserver
 import com.kangce.finance.http.ohkttp.RetrofitManager
@@ -35,6 +33,12 @@ class FixedAssetsActivity : BaseListActivity<FixedAssetsEntity>(), View.OnClickL
             val intent = Intent(context, FixedAssetsActivity::class.java)
             context?.startActivity(intent)
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        authRefresh()
     }
 
     override fun initView() {
@@ -58,7 +62,8 @@ class FixedAssetsActivity : BaseListActivity<FixedAssetsEntity>(), View.OnClickL
     override fun getSwipeRefreshLayout(): SwipeRefreshLayout = refresh
 
     override fun onItemClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
-
+        val entity = getAdapter().data.get(position)
+        AssetsEditActivity.start(this,entity.id)
     }
 
     override fun onClick(v: View?) {
@@ -67,7 +72,7 @@ class FixedAssetsActivity : BaseListActivity<FixedAssetsEntity>(), View.OnClickL
                 finish()
             }
             R.id.right_button->{
-                AssetsEditActivity.start(this)
+                AssetsCreateActivity.start(this)
             }
         }
     }
@@ -89,4 +94,9 @@ class FixedAssetsActivity : BaseListActivity<FixedAssetsEntity>(), View.OnClickL
 
                 })
     }
+
+    override fun isOpenAuthRefresh(): Boolean {
+        return false
+    }
+
 }

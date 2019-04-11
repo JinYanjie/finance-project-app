@@ -43,6 +43,10 @@ abstract class BaseListActivity<T> : BaseActivity(), RecyclerViewLoadListListene
         }
     }
 
+    public fun getAdapter(): BaseQuickAdapter<T, BaseViewHolder> {
+        return mAdapter
+    }
+
     // 加载成功设置adapter
     private fun setAdapter() {
         mAdapter = bindAdapter()

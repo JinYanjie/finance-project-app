@@ -7,6 +7,9 @@ import okhttp3.ResponseBody
 import retrofit2.Converter
 import retrofit2.Retrofit
 import java.lang.reflect.Type
+import com.google.gson.GsonBuilder
+
+
 
 
 
@@ -19,7 +22,11 @@ class CustomGsonConverterFactory(gson: Gson?): Converter.Factory(){
 
     companion object {
         fun create(): CustomGsonConverterFactory {
-            return create(Gson())
+
+            val gson = GsonBuilder()
+                    .setDateFormat("yyyy-MM-dd HH:mm:ss")
+                    .create()
+            return create(gson)
         }
 
         fun create(gson: Gson): CustomGsonConverterFactory {

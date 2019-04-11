@@ -11,7 +11,6 @@ import retrofit2.http.*
 import retrofit2.http.POST
 import retrofit2.http.Query
 import java.util.*
-
 interface ApiService {
 
     /**
@@ -126,6 +125,12 @@ interface ApiService {
     fun loadAllFixedAssetsList(): Observable<DataBean<List<FixedAssetsEntity>>>
 
     /**
+     * 根据id获取固定资产详情
+     */
+    @POST("/fixedAssets/loadFixedAssetsById")
+    fun loadFixedAssetsById(@Query("assetsId") assetsId: Int):Observable<DataBean<FixedAssetsEntity>>
+
+    /**
      * 获取所有资产类型
      */
     @POST("/fixedAssets/loadAllAssetType")
@@ -141,7 +146,15 @@ interface ApiService {
      * 新增资产条目
      */
     @POST("/fixedAssets/add")
-    fun addFixedAssets(@Body assets: FixedAssetsEntity): Observable<DataBean<Any>>
+    fun addFixedAssets(@Body assets:FixedAssetsEntity):Observable<DataBean<Any>>
+
+    /**
+     * 修改资产变动方式
+     */
+    @POST("/fixedAssets/editChangeWay")
+    fun editChangeWay(@Query("id") id: Int,
+                      @Query("changWay") changWay: Int):Observable<DataBean<Any>>
+
 
     /**
      * 获取凭证字

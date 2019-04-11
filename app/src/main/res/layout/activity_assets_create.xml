@@ -38,45 +38,12 @@
                     android:text="*资产名称"
                     android:textSize="16sp"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/et_assetsName"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@color/transparent"
-                    android:gravity="right|center_vertical"
-                    android:textSize="16sp"
-                    android:textColor="@color/text666"
-                    android:layout_marginRight="5dp"/>
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/service_gray_color"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/assets_line_height"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="*资产编号"
-                    android:textSize="16sp"/>
-
-                <TextView
-                    android:id="@+id/et_assetsCode"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:hint="请输入资产名称"
                     android:background="@color/transparent"
                     android:gravity="right|center_vertical"
                     android:textSize="16sp"
@@ -118,6 +85,16 @@
                     android:textSize="16sp"
                     android:textColor="@color/text666"/>
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    />
 
             </LinearLayout>
 
@@ -144,11 +121,12 @@
                     android:text="计量单位"
                     android:textSize="16sp"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/et_unit"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:hint="请输入单位"
                     android:background="@color/transparent"
                     android:gravity="right|center_vertical"
                     android:textSize="16sp"
@@ -179,11 +157,12 @@
                     android:text="规格型号"
                     android:textSize="16sp"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/et_specification"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:hint="请输入规格"
                     android:background="@color/transparent"
                     android:gravity="right|center_vertical"
                     android:textSize="16sp"
@@ -226,7 +205,16 @@
                     android:textSize="16sp"
                     android:textColor="@color/text666"/>
 
-
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    />
 
             </LinearLayout>
 
@@ -263,7 +251,16 @@
                     android:textSize="16sp"
                     android:textColor="@color/text666"/>
 
-
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    />
 
             </LinearLayout>
 
@@ -289,11 +286,12 @@
                     android:text="存放地点"
                     android:textSize="16sp"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/et_storagePosition"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:hint="请输入地址"
                     android:background="@color/transparent"
                     android:gravity="right|center_vertical"
                     android:textSize="16sp"
@@ -336,7 +334,6 @@
                     android:textColor="@color/text666"/>
 
                 <ImageView
-                    android:id="@+id/img_changeWayArrow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -370,11 +367,12 @@
                     android:text="经济用途"
                     android:textSize="16sp"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/et_purposeWay"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:hint="请输入用途"
                     android:background="@color/transparent"
                     android:gravity="right|center_vertical"
                     android:textSize="16sp"
@@ -403,11 +401,12 @@
                     android:text="供应商"
                     android:textSize="16sp"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/et_supplier"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:hint="请输入供应商"
                     android:background="@color/transparent"
                     android:gravity="right|center_vertical"
                     android:textSize="16sp"
@@ -450,6 +449,16 @@
                     android:textSize="16sp"
                     android:textColor="@color/text666"/>
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    />
 
             </LinearLayout>
 
@@ -475,11 +484,12 @@
                     android:text="*资产原值"
                     android:textSize="16sp"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/et_AssetsRealPrice"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:hint="请输入金额"
                     android:background="@color/transparent"
                     android:gravity="right|center_vertical"
                     android:textSize="16sp"
@@ -523,6 +533,16 @@
                     android:textSize="16sp"
                     android:textColor="@color/text666"/>
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    />
 
             </LinearLayout>
 
@@ -555,11 +575,12 @@
                         android:text="*预计使用期间数"
                         android:textSize="16sp"/>
 
-                    <TextView
+                    <EditText
                         android:id="@+id/et_user_time_count"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:hint="请输入月数"
                         android:inputType="number"
                         android:background="@color/transparent"
                         android:gravity="right|center_vertical"
@@ -590,11 +611,12 @@
                         android:text="*月折旧率(%)"
                         android:textSize="16sp"/>
 
-                    <TextView
+                    <EditText
                         android:id="@+id/et_monthDepreciation"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:hint="请输入月折旧率"
                         android:background="@color/transparent"
                         android:gravity="right|center_vertical"
                         android:textSize="16sp"
@@ -612,76 +634,7 @@
 
 
 
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="@dimen/assets_line_height"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:gravity="center_vertical"-->
-                    <!--android:layout_marginLeft="15dp"-->
-                    <!--android:layout_marginRight="15dp">-->
-
-                    <!--<TextView-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:text="已经使用的月数"-->
-                        <!--android:textSize="16sp"/>-->
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/et_usedTimeCount"-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="1"-->
-                        <!--android:background="@color/transparent"-->
-                        <!--android:gravity="right|center_vertical"-->
-                        <!--android:textSize="16sp"-->
-                        <!--android:textColor="@color/text666"-->
-                        <!--android:layout_marginRight="5dp"-->
-                        <!--android:inputType="numberDecimal"/>-->
-
-                <!--</LinearLayout>-->
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="1dp"-->
-                    <!--android:background="@color/service_gray_color"-->
-                    <!--android:layout_marginLeft="10dp"-->
-                    <!--android:layout_marginRight="10dp"/>-->
-
-
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/assets_line_height"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="资产价值"
-                    android:textSize="16sp"/>
-
-                <TextView
-                    android:id="@+id/et_worthCount"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/transparent"
-                    android:gravity="right|center_vertical"
-                    android:textSize="16sp"
-                    android:textColor="@color/text666"
-                    android:layout_marginRight="5dp"
-                    />
-
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/service_gray_color"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
 
 
             <TextView
