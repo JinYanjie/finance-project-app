@@ -70,4 +70,7 @@ dependencies {
 
     implementation 'com.contrarywind:Android-PickerView:4.1.7'
 
+    // banner
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+
 }

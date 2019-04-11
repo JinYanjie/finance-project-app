@@ -10,7 +10,7 @@
         android:name="com.kangce.finance.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo"
-        android:label="金银花"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
@@ -92,9 +92,17 @@
             android:name=".ui.entry_certificate.CertificateDetailActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".ui.sheet.BalanceSheetActivity"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".ui.entry_certificate.EntryCertificate"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.sheet.IncomeSheetActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sheet.CashFlowSheetActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

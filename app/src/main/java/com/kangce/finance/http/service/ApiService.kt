@@ -11,6 +11,7 @@ import retrofit2.http.*
 import retrofit2.http.POST
 import retrofit2.http.Query
 import java.util.*
+
 interface ApiService {
 
     /**
@@ -128,7 +129,7 @@ interface ApiService {
      * 根据id获取固定资产详情
      */
     @POST("/fixedAssets/loadFixedAssetsById")
-    fun loadFixedAssetsById(@Query("assetsId") assetsId: Int):Observable<DataBean<FixedAssetsEntity>>
+    fun loadFixedAssetsById(@Query("assetsId") assetsId: Int): Observable<DataBean<FixedAssetsEntity>>
 
     /**
      * 获取所有资产类型
@@ -146,14 +147,14 @@ interface ApiService {
      * 新增资产条目
      */
     @POST("/fixedAssets/add")
-    fun addFixedAssets(@Body assets:FixedAssetsEntity):Observable<DataBean<Any>>
+    fun addFixedAssets(@Body assets: FixedAssetsEntity): Observable<DataBean<Any>>
 
     /**
      * 修改资产变动方式
      */
     @POST("/fixedAssets/editChangeWay")
     fun editChangeWay(@Query("id") id: Int,
-                      @Query("changWay") changWay: Int):Observable<DataBean<Any>>
+                      @Query("changWay") changWay: Int): Observable<DataBean<Any>>
 
 
     /**
@@ -186,7 +187,25 @@ interface ApiService {
      */
 
     @POST("/certificateManager/check")
-    fun checkCertificate(@Query("certificateNum") certificateNum: String,@Query("currentNum") currentNum: Int,
-                         @Query("userId") userId: Int,@Query("state") state: Int): Observable<DataBean<Any>>
+    fun checkCertificate(@Query("certificateNum") certificateNum: String, @Query("currentNum") currentNum: Int,
+                         @Query("userId") userId: Int, @Query("state") state: Int): Observable<DataBean<Any>>
 
+
+    /**
+     * 获取资产负债表
+     */
+    @POST("/sheet/getBalanceSheet")
+    fun getBalanceSheet(@Query("type") type: Int): Observable<DataBean<List<BalanceSheetBean>>>
+
+    /**
+     * 获取损益表
+     */
+    @POST("/sheet/getIncomeSheet")
+    fun getIncomeSheet(): Observable<DataBean<List<IncomeSheetBean>>>
+
+    /**
+     * 获取现金流量表
+     */
+    @POST("/sheet/getCashFlowSheet")
+    fun getCashFlowSheet(): Observable<DataBean<List<IncomeSheetBean>>>
 }

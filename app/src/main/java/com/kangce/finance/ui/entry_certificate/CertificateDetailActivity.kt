@@ -9,7 +9,6 @@ import com.chad.library.adapter.base.BaseViewHolder
 import com.hjq.toast.ToastUtils
 import com.kangce.finance.R
 import com.kangce.finance.base.BaseActivity
-import com.kangce.finance.bean.CertificateBean
 import com.kangce.finance.bean.CertificateListBean
 import com.kangce.finance.bean.CertificateManagerBean
 import com.kangce.finance.bean.UserEntity
@@ -115,7 +114,5 @@ class CertificateDetailActivity : BaseActivity() {
                 }
             }
         }
-
-
     }
 }
