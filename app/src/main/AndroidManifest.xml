@@ -65,7 +65,7 @@
         <activity
             android:name=".ui.manager.userlevel.UserLevelActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.manager.salary.AddSalaryActivity"/>
+        <activity android:name=".ui.manager.salary.AddSalaryActivity" />
 
         <activity
             android:name=".ui.fixedassets.FixedAssetsActivity"
@@ -73,8 +73,21 @@
         <activity
             android:name=".ui.fixedassets.AssetsEditActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.entry_certificate.EntryCertificate"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.entry_certificate.EntryCertificateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.entry_certificate.CertificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.entry_certificate.BaseCourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.entry_certificate.CertificateManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.entry_certificate.CertificateDetailActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

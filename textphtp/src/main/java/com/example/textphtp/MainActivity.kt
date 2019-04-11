@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         var observer = object : HttpRxObserver<LoginSuccess>() {
             override fun onStart(d: Disposable) {
             }
-
             override fun onError(e: ApiException) {
 
             }

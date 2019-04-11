@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.View
 import com.kangce.finance.base.BaseFragment
 import com.kangce.finance.R
+import com.kangce.finance.ui.entry_certificate.CertificateManagerActivity
+import com.kangce.finance.ui.entry_certificate.EntryCertificateActivity
 import com.kangce.finance.ui.fixedassets.FixedAssetsActivity
 import kotlinx.android.synthetic.main.fragment_home_layout.*
 
@@ -22,7 +24,7 @@ class HomeFragment:BaseFragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         iv_fixedAssets.setOnClickListener(this)
-
+        iv_entryCertificate.setOnClickListener(this)
     }
 
 
@@ -32,7 +34,7 @@ class HomeFragment:BaseFragment(), View.OnClickListener {
                 FixedAssetsActivity.start(context)
             }
             R.id.iv_entryCertificate->{
-
+                CertificateManagerActivity.start(context)
             }
         }
     }

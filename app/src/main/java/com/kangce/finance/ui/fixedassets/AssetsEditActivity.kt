@@ -11,6 +11,7 @@ import com.bigkoo.pickerview.builder.TimePickerBuilder
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener
 import com.bigkoo.pickerview.listener.OnTimeSelectListener
 import com.bigkoo.pickerview.view.TimePickerView
+
 import com.hjq.toast.ToastUtils
 import com.kangce.finance.R
 import com.kangce.finance.base.BaseActivity
@@ -34,7 +35,6 @@ import java.math.BigDecimal
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
 
 
 class AssetsEditActivity : BaseActivity(), View.OnClickListener {
@@ -236,7 +236,6 @@ class AssetsEditActivity : BaseActivity(), View.OnClickListener {
                 tv_depreciationWay.tag = options1
 
                 if(options1 == 1) ll_countDepreciationi.visibility = View.VISIBLE else ll_countDepreciationi.visibility = View.GONE
-
 
             }
         })

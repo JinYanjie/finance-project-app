@@ -31,7 +31,7 @@
         android:paddingRight="@dimen/comm_margin"
         android:textColor="@color/text_normal"
         android:textSize="@dimen/sp_14"
-        android:visibility="gone"
+        android:visibility="visible"
         tools:text="按钮" />
 
     <TextView

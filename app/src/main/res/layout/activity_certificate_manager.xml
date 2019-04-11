@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/b1"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="全部凭证" />
+
+            <Button
+                android:id="@+id/b2"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="已审核凭证" />
+
+            <Button
+                android:id="@+id/b3"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="未审核凭证" />
+        </TableRow>
+    </TableLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvCertificate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
