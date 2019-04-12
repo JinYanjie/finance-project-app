@@ -24,6 +24,8 @@ open abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
         }
         // 通过注解绑定控件
         AppManager.instance.addActivity(this)
+//        EventBus.getDefault().register(this)
+
         init(savedInstanceState)
         initView()
         initData()
@@ -35,7 +37,7 @@ open abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
         }
         super.onDestroy()
         AppManager.instance.finishActivity(this)
-        EventBus.getDefault().unregister(this)
+//        EventBus.getDefault().unregister(this)
 
     }
 
@@ -59,5 +61,7 @@ open abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
         }
         return loadDialog
     }
+
+
 
 }

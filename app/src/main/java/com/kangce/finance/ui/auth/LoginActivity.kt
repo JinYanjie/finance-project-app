@@ -33,6 +33,7 @@ class LoginActivity :BaseActivity(), LoginContract.View, View.OnClickListener {
         super.initView()
         btn_submit.setOnClickListener(this)
         ll_jumpToCode.setOnClickListener(this)
+        back.setOnClickListener(this)
     }
 
 
@@ -56,6 +57,9 @@ class LoginActivity :BaseActivity(), LoginContract.View, View.OnClickListener {
             }
             R.id.ll_jumpToCode->{
                 RegisterActivity.start(this)
+            }
+            R.id.back->{
+                finish()
             }
         }
     }

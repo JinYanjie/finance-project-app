@@ -33,6 +33,7 @@ class RegisterActivity : BaseActivity(), LoginContract.View, View.OnClickListene
 
         btn_submit.setOnClickListener(this)
         jumpToPassword.setOnClickListener(this)
+        back.setOnClickListener(this)
 
     }
 
@@ -63,6 +64,9 @@ class RegisterActivity : BaseActivity(), LoginContract.View, View.OnClickListene
             }
             R.id.jumpToPassword->{
                 LoginActivity.start(this)
+            }
+            R.id.back->{
+                finish()
             }
 
         }
