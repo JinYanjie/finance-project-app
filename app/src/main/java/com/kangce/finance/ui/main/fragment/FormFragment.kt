@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.kangce.finance.base.BaseFragment
 import com.kangce.finance.R
-import com.kangce.finance.ui.sheet.BalanceSheetActivity
-import com.kangce.finance.ui.sheet.CashFlowSheetActivity
-import com.kangce.finance.ui.sheet.IncomeSheetActivity
+import com.kangce.finance.ui.sheet.*
 import kotlinx.android.synthetic.main.fragment_form_layout.*
 import kotlinx.android.synthetic.main.title.*
 
@@ -40,10 +38,10 @@ class FormFragment : BaseFragment(), View.OnClickListener {
                 CashFlowSheetActivity.start(context)
             }
             R.id.sheet4 -> {
-
+                WaitActivity.start(context)
             }
             R.id.sheet5 -> {
-
+                AllocateActivity.start(context)
             }
         }
     }
