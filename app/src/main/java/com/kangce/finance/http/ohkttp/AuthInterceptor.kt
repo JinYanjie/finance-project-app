@@ -14,7 +14,8 @@ class AuthInterceptor : Interceptor {
             var originalRequest = chain.request()
             val authorised = originalRequest.newBuilder().header("platform", "2")
 
-            var token = UserCacheHelper.getEntity()?.token ?: Constant.TOKEN
+            var token = UserCacheHelper.getEntity()?.token
+//            var token = UserCacheHelper.getEntity()?.token ?: Constant.TOKEN
             authorised.header("Authorization", token)
 
             try {
