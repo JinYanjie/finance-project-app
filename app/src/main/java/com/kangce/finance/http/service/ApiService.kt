@@ -208,4 +208,10 @@ interface ApiService {
      */
     @POST("/sheet/getCashFlowSheet")
     fun getCashFlowSheet(): Observable<DataBean<List<IncomeSheetBean>>>
+
+    /**
+     * 获取资金分配表
+     */
+    @POST("/sheet/getAllocateSheet")
+    fun getAllocateSheet(): Observable<DataBean<List<AllocateSalaryBean>>>
 }

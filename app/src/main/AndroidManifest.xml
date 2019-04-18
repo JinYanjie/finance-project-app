@@ -103,6 +103,13 @@
         <activity
             android:name=".ui.sheet.CashFlowSheetActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.sheet.WaitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sheet.AllocateActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -73,4 +73,7 @@ dependencies {
     // banner
     implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
 
+    implementation 'com.kangcenet.basemodule:net:1.0.0'
+
+    implementation 'com.github.lecho:hellocharts-android:v1.5.8'
 }
